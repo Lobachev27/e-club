@@ -1,0 +1,82 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.input-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 35px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & .input {
+    background-color: transparent;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid $border-color;
+    outline: none;
+    width: 100%;
+    padding: 5px 0;
+    color: $text-color-main;
+    transition: border 0.3s;
+
+    &:focus {
+      border-bottom: 1px solid $main-color-hover;
+
+      & + div .input-label {
+        font-size: 12px;
+        color: $main-color-hover;
+        bottom: calc(50% + 15px);
+      }
+
+      & + div .input-icon {
+        & svg {
+          fill: $main-color-hover;
+        }
+      }
+    }
+
+    &:valid {
+      border-bottom: 1px solid $main-color-hover;
+
+      & + div .input-label {
+        font-size: 12px;
+        color: $main-color;
+        bottom: calc(50% + 15px);
+      }
+
+      & + div .input-icon {
+        & svg {
+          fill: $main-color-hover;
+        }
+      }
+    }
+  }
+
+  & .input-label {
+    color: $text-color-main-two;
+    position: absolute;
+    font-size: 16px;
+    bottom: calc(50% - 7px);
+    left: 0;
+    pointer-events: none;
+    transition: font-size 0.3s, bottom 0.3s;
+    transition-duration: 0.2s;
+  }
+
+  & .input-icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 0;
+    top: 6px;
+
+    & svg {
+      width: 100%;
+      height: 100%;
+      fill: $border-color;
+      transition: fill 0.3s;
+    }
+  }
+}

@@ -1,0 +1,412 @@
+<section class="schedule">
+  <div class="container">
+    <div class="row">
+      <h2 class="title title-h2"><span>Расписание </span>занятий</h2>
+    </div>
+    <div class="schedule__tabs">
+      <a class="schedule__tab" href="#all">Полное расписание</a>
+      <a class="schedule__tab" href="#martialArts">Единоборства</a>
+      <a class="schedule__tab" href="#fitness">Фитнес</a>
+      <a class="schedule__tab" href="#fitnessChildren">Детский фитнес</a>
+    </div>
+  </div>
+
+  <div id="all" class="schedule__wrapper">
+    <div class="schedule__table">
+      <div class="schedule__topic">
+        <div class="schedule__topic-col">Понедельник</div>
+        <div class="schedule__topic-col">Вторник</div>
+        <div class="schedule__topic-col">Среда</div>
+        <div class="schedule__topic-col">Четверг</div>
+        <div class="schedule__topic-col">Пятница</div>
+        <div class="schedule__topic-col">Суббота</div>
+        <div class="schedule__topic-col">Воскресение</div>
+      </div>
+      <div class="schedule__list">
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '07:00	— 08:00', 'name': 'Школа Бокса', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '10:00	— 11:00', 'name': 'Body Sculpt', 'coach': 'Ольга Кузнецова', 'marker': '',},
+              {'time': '11:00	— 12:00', 'name': 'Zumba<sup>®</sup>', 'coach': 'Елена Харыбина', 'marker': '',},
+              {'time': '12:30	— 13:30', 'name': 'Школа Бокса 5-8 лет', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '13:30	— 15:00', 'name': 'Школа Бокса 9-15 лет', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '17:00	— 18:00', 'name': 'Здоровое тело', 'coach': '', 'marker': '',},
+              {'time': '19:00	— 20:00', 'name': 'Interval Mix', 'coach': 'Елена Харыбина', 'marker': '',},
+              {'time': '19:00	— 20:00', 'name': 'Школа Бокса 12-18 лет', 'coach': 'Юрий Ильин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '20:00	— 21:00', 'name': 'Yoga', 'coach': 'Диана Султанова', 'marker': '',},
+              {'time': '20:00	— 21:00', 'name': 'CYCLING', 'coach': 'Елена Харыбина', 'marker': '',},
+              {'time': '20:00	— 21:00', 'name': 'TRX', 'coach': 'Юрий Захаров', 'marker': '',},
+              {'time': '21:00	— 22:00', 'name': 'Школа Бокса 18+', 'coach': 'Юрий Ильин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '07:00	— 08:00', 'name': 'Школа Бокса', 'coach': 'Юрий Ильин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '10:00	— 11:00', 'name': 'BodyFit', 'coach': 'Елена Харыбина', 'marker': '',},
+              {'time': '11:00	— 12:00', 'name': 'Бокс', 'coach': 'Юрий Ильин', 'marker': '',},
+              {'time': '11:00	— 12:00', 'name': 'Yoga', 'coach': 'Диана Султанова', 'marker': '',},
+              {'time': '16:00	— 17:00', 'name': 'Functional & Balance ЮНИОР', 'coach': '', 'marker': '',},
+              {'time': '18:00	— 19:30', 'name': 'Тхэквондо 4-7 лет', 'coach': '', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '19:45	— 20:45', 'name': 'Тхэквондо 7-12 лет', 'coach': '', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '20:00	— 21:00', 'name': 'ABS+Stretch', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '20:30	— 21:30', 'name': 'Тайский бокс', 'coach': '', 'marker': '',},
+              {'time': '21:00	— 22:00', 'name': 'Strip Dance', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '22:00	— 23:00', 'name': 'Strip Dance', 'coach': 'Евгений Кудаев', 'marker': '<div class="schedule__box-marker">₽</div>',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '07:00	— 08:00', 'name': 'Школа Бокса', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '10:00	— 11:00', 'name': 'Body Ballet', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '11:00	— 12:00', 'name': 'Stretch', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '12:30	— 13:30', 'name': 'Школа Бокса 5-8 лет', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '13:30	— 15:00', 'name': 'Школа Бокса 9-15 лет', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '17:00	— 18:00', 'name': 'Cycling ЮНИОР', 'coach': '', 'marker': '',},
+              {'time': '19:00	— 20:00', 'name': 'Школа Бокса 12-18 лет', 'coach': 'Юрий Ильин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '20:00	— 21:00', 'name': 'Step Aerobic', 'coach': 'Ольга Кузнецова', 'marker': '',},
+              {'time': '20:00	— 21:00', 'name': 'TRX', 'coach': 'Юрий Захаров', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '21:00	— 22:00', 'name': 'Школа Бокса 18+', 'coach': 'Юрий Ильин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '21:00	— 22:00', 'name': 'Pilates Mat', 'coach': 'Ольга Кузнецова', 'marker': '',},
+              {'time': '21:00	— 22:00', 'name': 'Round Training', 'coach': '', 'marker': '',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '07:00	— 08:00', 'name': 'Школа Бокса', 'coach': 'Юрий Ильин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '10:00	— 11:00', 'name': 'Interval Mix', 'coach': 'Елена Харыбина', 'marker': '',},
+              {'time': '11:00	— 12:00', 'name': 'Lower Body', 'coach': 'Елена Харыбина', 'marker': '',},
+              {'time': '16:00	— 17:00', 'name': 'Tik-Tok Dance ЮНИОР', 'coach': '', 'marker': '',},
+              {'time': '18:00	— 19:00', 'name': 'Художественная гимнастика 3+', 'coach': '', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '18:00	— 19:30', 'name': 'Тхэквондо 4-7 лет', 'coach': '', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '19:45	— 20:45', 'name': 'Тхэквондо 7-12 лет', 'coach': '', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '20:00	— 21:00', 'name': 'Round Training', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '20:30	— 21:30', 'name': 'Тайский бокс', 'coach': '', 'marker': '',},
+              {'time': '21:00	— 22:00', 'name': 'Stretch', 'coach': 'Евгений Кудаев', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '21:00	— 22:00', 'name': 'Трансперсональная медитация', 'coach': 'Евгений Кудаев', 'marker': '<div class="schedule__box-marker">₽</div>',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '07:00	— 08:00', 'name': 'Школа Бокса', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '10:00	— 11:00', 'name': 'ABS', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '11:00	— 12:00', 'name': 'Stretch', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '12:30	— 13:30', 'name': 'Школа Бокса 5-8 лет', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '13:30	— 15:00', 'name': 'Школа Бокса 9-15 лет', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '16:00	— 17:00', 'name': 'ГТО + Stretching ЮНИОР', 'coach': '', 'marker': '',},
+              {'time': '19:00	— 20:00', 'name': 'Школа Бокса 12-18 лет', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '19:00	— 20:00', 'name': 'Basic Workout', 'coach': 'Виктория Пономарёва', 'marker': '',},
+              {'time': '20:00	— 21:00', 'name': 'TRX', 'coach': 'Юрий Захаров', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '21:00	— 22:00', 'name': 'Школа Бокса 18+', 'coach': 'Юрий Ильин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '11:00	— 12:00', 'name': 'Body Sculpt', 'coach': 'Елена Харыбина', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '11:00	— 12:00', 'name': 'Тхэквондо 7-12 лет', 'coach': 'Артём Ерошин', 'marker': '',},
+              {'time': '12:30	— 13:30', 'name': 'Тайский бокс', 'coach': '', 'marker': '',},
+              {'time': '13:00	— 14:00', 'name': 'Round Training', 'coach': '', 'marker': '',},
+              {'time': '14:00	— 15:00', 'name': 'Здоровая спина', 'coach': '', 'marker': '',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '11:00	— 12:00', 'name': 'Pilates', 'coach': 'Елена Харыбина', 'marker': '',},
+              {'time': '12:00	— 13:00', 'name': 'Latina', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '13:00	— 14:00', 'name': 'Stretch', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '14:00	— 15:00', 'name': 'Трансперсональная медитация', 'coach': 'Евгений Кудаев', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '16:00 — 17:00', 'name': 'Актёрское мастерство ЮНИОР', 'coach': '', 'marker': '',},
+            ],
+          }
+        })
+
+      </div>
+    </div>
+  </div>
+
+  <div id="martialArts" class="schedule__wrapper">
+    <div class="schedule__table">
+      <div class="schedule__topic">
+        <div class="schedule__topic-col">Понедельник</div>
+        <div class="schedule__topic-col">Вторник</div>
+        <div class="schedule__topic-col">Среда</div>
+        <div class="schedule__topic-col">Четверг</div>
+        <div class="schedule__topic-col">Пятница</div>
+        <div class="schedule__topic-col">Суббота</div>
+        <div class="schedule__topic-col">Воскресение</div>
+      </div>
+      <div class="schedule__list">
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '21:00	— 22:00', 'name': 'Школа Бокса 18+', 'coach': 'Юрий Ильин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '11:00	— 12:00', 'name': 'Бокс', 'coach': 'Юрий Ильин', 'marker': '',},
+              {'time': '20:30	— 21:30', 'name': 'Тайский бокс', 'coach': '', 'marker': '',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '21:00	— 22:00', 'name': 'Школа Бокса 18+', 'coach': 'Юрий Ильин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '20:30	— 21:30', 'name': 'Тайский бокс', 'coach': '', 'marker': '',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '21:00	— 22:00', 'name': 'Школа Бокса 18+', 'coach': 'Юрий Ильин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '12:30	— 13:30', 'name': 'Тайский бокс', 'coach': '', 'marker': '',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [],
+          }
+        })
+
+      </div>
+    </div>
+  </div>
+
+  <div id="fitness" class="schedule__wrapper">
+    <div class="schedule__table">
+      <div class="schedule__topic">
+        <div class="schedule__topic-col">Понедельник</div>
+        <div class="schedule__topic-col">Вторник</div>
+        <div class="schedule__topic-col">Среда</div>
+        <div class="schedule__topic-col">Четверг</div>
+        <div class="schedule__topic-col">Пятница</div>
+        <div class="schedule__topic-col">Суббота</div>
+        <div class="schedule__topic-col">Воскресение</div>
+      </div>
+      <div class="schedule__list">
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '10:00	— 11:00', 'name': 'Body Sculpt', 'coach': 'Ольга Кузнецова', 'marker': '',},
+              {'time': '11:00	— 12:00', 'name': 'Zumba<sup>®</sup>', 'coach': 'Елена Харыбина', 'marker': '',},
+              {'time': '19:00	— 20:00', 'name': 'Interval Mix', 'coach': 'Елена Харыбина', 'marker': '',},
+              {'time': '20:00	— 21:00', 'name': 'Yoga', 'coach': 'Диана Султанова', 'marker': '',},
+              {'time': '20:00	— 21:00', 'name': 'CYCLING', 'coach': 'Елена Харыбина', 'marker': '',},
+              {'time': '20:00	— 21:00', 'name': 'TRX', 'coach': 'Юрий Захаров', 'marker': '',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '10:00	— 11:00', 'name': 'BodyFit', 'coach': 'Елена Харыбина', 'marker': '',},
+              {'time': '11:00	— 12:00', 'name': 'Yoga', 'coach': 'Диана Султанова', 'marker': '',},
+              {'time': '20:00	— 21:00', 'name': 'ABS+Stretch', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '21:00	— 22:00', 'name': 'Strip Dance', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '22:00	— 23:00', 'name': 'Strip Dance', 'coach': 'Евгений Кудаев', 'marker': '<div class="schedule__box-marker">₽</div>',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '10:00	— 11:00', 'name': 'Body Ballet', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '11:00	— 12:00', 'name': 'Stretch', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '20:00	— 21:00', 'name': 'Step Aerobic', 'coach': 'Ольга Кузнецова', 'marker': '',},
+              {'time': '20:00	— 21:00', 'name': 'TRX', 'coach': 'Юрий Захаров', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '21:00	— 22:00', 'name': 'Pilates Mat', 'coach': 'Ольга Кузнецова', 'marker': '',},
+              {'time': '21:00	— 22:00', 'name': 'Round Training', 'coach': '', 'marker': '',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '10:00	— 11:00', 'name': 'Interval Mix', 'coach': 'Елена Харыбина', 'marker': '',},
+              {'time': '11:00	— 12:00', 'name': 'Lower Body', 'coach': 'Елена Харыбина', 'marker': '',},
+              {'time': '20:00	— 21:00', 'name': 'Round Training', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '21:00	— 22:00', 'name': 'Stretch', 'coach': 'Евгений Кудаев', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '21:00	— 22:00', 'name': 'Трансперсональная медитация', 'coach': 'Евгений Кудаев', 'marker': '<div class="schedule__box-marker">₽</div>',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '10:00	— 11:00', 'name': 'ABS', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '11:00	— 12:00', 'name': 'Stretch', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '19:00	— 20:00', 'name': 'Basic Workout', 'coach': 'Виктория Пономарёва', 'marker': '',},
+              {'time': '20:00	— 21:00', 'name': 'TRX', 'coach': 'Юрий Захаров', 'marker': '<div class="schedule__box-marker">₽</div>',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '11:00	— 12:00', 'name': 'Body Sculpt', 'coach': 'Елена Харыбина', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '13:00	— 14:00', 'name': 'Round Training', 'coach': '', 'marker': '',},
+              {'time': '14:00	— 15:00', 'name': 'Здоровая спина', 'coach': '', 'marker': '',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '11:00	— 12:00', 'name': 'Pilates', 'coach': 'Елена Харыбина', 'marker': '',},
+              {'time': '12:00	— 13:00', 'name': 'Latina', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '13:00	— 14:00', 'name': 'Stretch', 'coach': 'Евгений Кудаев', 'marker': '',},
+              {'time': '14:00	— 15:00', 'name': 'Трансперсональная медитация', 'coach': 'Евгений Кудаев', 'marker': '<div class="schedule__box-marker">₽</div>',},
+            ],
+          }
+        })
+
+      </div>
+    </div>
+  </div>
+
+  <div id="fitnessChildren" class="schedule__wrapper">
+    <div class="schedule__table">
+      <div class="schedule__topic">
+        <div class="schedule__topic-col">Понедельник</div>
+        <div class="schedule__topic-col">Вторник</div>
+        <div class="schedule__topic-col">Среда</div>
+        <div class="schedule__topic-col">Четверг</div>
+        <div class="schedule__topic-col">Пятница</div>
+        <div class="schedule__topic-col">Суббота</div>
+        <div class="schedule__topic-col">Воскресение</div>
+      </div>
+      <div class="schedule__list">
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '07:00	— 08:00', 'name': 'Школа Бокса', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '12:30	— 13:30', 'name': 'Школа Бокса 5-8 лет', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '13:30	— 15:00', 'name': 'Школа Бокса 9-15 лет', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '17:00	— 18:00', 'name': 'Здоровое тело', 'coach': '', 'marker': '',},
+              {'time': '19:00	— 20:00', 'name': 'Школа Бокса 12-18 лет', 'coach': 'Юрий Ильин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '07:00	— 08:00', 'name': 'Школа Бокса', 'coach': 'Юрий Ильин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '16:00	— 17:00', 'name': 'Functional & Balance ЮНИОР', 'coach': '', 'marker': '',},
+              {'time': '18:00	— 19:30', 'name': 'Тхэквондо 4-7 лет', 'coach': '', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '19:45	— 20:45', 'name': 'Тхэквондо 7-12 лет', 'coach': '', 'marker': '<div class="schedule__box-marker">₽</div>',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '07:00	— 08:00', 'name': 'Школа Бокса', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '12:30	— 13:30', 'name': 'Школа Бокса 5-8 лет', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '13:30	— 15:00', 'name': 'Школа Бокса 9-15 лет', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '17:00	— 18:00', 'name': 'Cycling ЮНИОР', 'coach': '', 'marker': '',},
+              {'time': '19:00	— 20:00', 'name': 'Школа Бокса 12-18 лет', 'coach': 'Юрий Ильин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '07:00	— 08:00', 'name': 'Школа Бокса', 'coach': 'Юрий Ильин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '16:00	— 17:00', 'name': 'Tik-Tok Dance ЮНИОР', 'coach': '', 'marker': '',},
+              {'time': '18:00	— 19:00', 'name': 'Художественная гимнастика 3+', 'coach': '', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '18:00	— 19:30', 'name': 'Тхэквондо 4-7 лет', 'coach': '', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '19:45	— 20:45', 'name': 'Тхэквондо 7-12 лет', 'coach': '', 'marker': '<div class="schedule__box-marker">₽</div>',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '07:00	— 08:00', 'name': 'Школа Бокса', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '12:30	— 13:30', 'name': 'Школа Бокса 5-8 лет', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '13:30	— 15:00', 'name': 'Школа Бокса 9-15 лет', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              {'time': '16:00	— 17:00', 'name': 'ГТО + Stretching ЮНИОР', 'coach': '', 'marker': '',},
+              {'time': '19:00	— 20:00', 'name': 'Школа Бокса 12-18 лет', 'coach': 'Валерий Железкин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '11:00	— 12:00', 'name': 'Тхэквондо 7-12 лет', 'coach': 'Артём Ерошин', 'marker': '',},
+            ],
+          }
+        })
+
+        @@include("./schedule-day.html", {
+          context: {
+            arr: [
+              {'time': '16:00 — 17:00', 'name': 'Актёрское мастерство ЮНИОР', 'coach': '', 'marker': '',},
+            ],
+          }
+        })
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <a class="btn btn-big btn-gold js-popup" href="#training">Записаться на пробную тренировку</a>
+  </div>
+</section>

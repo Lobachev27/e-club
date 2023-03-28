@@ -1,0 +1,47 @@
+<section class="atmosphere">
+  <div class="container">
+    <div class="row">
+      <h2 class="title title-h2">@@context.title</h2>
+      @@if(context.slogan){
+      <div class="atmosphere__slogan">@@context.slogan</div>
+      }
+    </div>
+    <div class="atmosphere__wrapper">
+      <div class="atmosphere__info">
+        <div class="atmosphere__description">@@context.description</div>
+        <a class="btn btn-big btn-gold js-popup" href="#request">Заказать тур по клубу</a>
+      </div>
+      <div class="atmosphere__slider">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            @@for (var i = 0; i < context.arr.length; i++) {
+            <div class="swiper-slide">
+              <div class="atmosphere__box">
+                <img src="`+context.arr[i]+`" alt="">
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="atmosphere__slider-counter">
+          <div class="atmosphere__slider-number">01.</div>
+          <div class="atmosphere__slider-total"></div>
+        </div>
+
+        <div class="swiper-button-next">
+          <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 2L14 14L2 26" stroke-width="3" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="swiper-button-prev">
+          <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 2L2 14L14 26" stroke-width="3" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,74 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.btn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  width: max-content;
+  color: $text-color-main;
+  height: 36px;
+  border-radius: 36px;
+  padding: 0 25px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s, border 0.3s;
+
+  &.btn-small {
+    @media screen and ($tablet1) {
+      padding: 0 30px;
+    }
+    @media screen and ($tablet2) {
+      font-size: 14px;
+      height: 40px;
+      border-radius: 40px;
+      padding: 0 35px;
+    }
+    @media screen and ($desktop1) {
+      font-size: 15px;
+      height: 44px;
+      border-radius: 44px;
+      padding: 0 35px;
+    }
+  }
+
+  &.btn-big {
+    @media screen and ($tablet1) {
+      font-size: 14px;
+      height: 40px;
+      border-radius: 40px;
+      padding: 0 35px;
+    }
+    @media screen and ($desktop1) {
+      font-size: 18px;
+      height: 52px;
+      border-radius: 52px;
+      padding: 0 44px;
+    }
+  }
+
+  &.btn-transparent {
+    background-color: transparent;
+    border: 2px solid $main-color;
+
+    &:hover {
+      border: 2px solid $main-color-hover;
+      background-color: $main-color-hover;
+    }
+  }
+
+  &.btn-gold {
+    border: 2px solid $main-color;
+    background-color: $main-color;
+
+    &:hover {
+      border: 2px solid $main-color-hover;
+      background-color: $main-color-hover;
+    }
+  }
+}

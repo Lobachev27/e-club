@@ -1,0 +1,53 @@
+<section class="programs">
+  <div class="container">
+    @@if(context.title){
+    <div class="row">
+      <h2 class="title title-h2">@@context.title</h2>
+    </div>
+    }
+    <div class="programs__list">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="programs__box `+context.arr[i].class+`">
+        <div class="programs__box-img">
+          <img src="`+context.arr[i].image+`" alt="">
+        </div>
+        <div class="programs__box-info">
+          <div class="programs__box-caption">`+context.arr[i].caption+`</div>
+          <div class="programs__box-left">
+            <div class="programs__box-description">`+context.arr[i].description+`</div>
+          </div>
+          <div class="programs__box-right">
+            <div class="programs__box-more">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16.679" height="28" viewBox="0 0 16.679 28">
+                <path id="angle-left" d="M.983,109.231,13.826,96.283a1.051,1.051,0,0,1,1.487,0l1.732,1.732a1.051,1.051,0,0,1,0,1.487L6.679,109.975l10.367,10.472a1.051,1.051,0,0,1,0,1.487l-1.732,1.732a1.051,1.051,0,0,1-1.487,0L.983,110.719A1.051,1.051,0,0,1,.983,109.231Z" transform="translate(17.354 123.975) rotate(180)"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <a class="programs__box-link" href="`+context.arr[i].link+`"></a>
+      </div>
+      }
+      @@if(context.request){
+      <div class="programs__box box-request">
+        <div class="programs__box-bg">
+          <div class="programs__box-orbit-one">
+            <div class="programs__box-ellipse-one"></div>
+          </div>
+          <div class="programs__box-orbit-two">
+            <div class="programs__box-ellipse-two"></div>
+            <div class="programs__box-ellipse-three"></div>
+          </div>
+        </div>
+        <div class="programs__request-img">
+          <img src="./img/programs-request.png" alt="">
+        </div>
+        <div class="programs__request-info">
+          <div class="programs__request-caption">Не можете определиться с тренировкой</div>
+          <div class="programs__request-description">Оставьте заявку и наши менеджеры помогут вам подобрать оптимальную программу под ваши цели</div>
+          <a class="btn btn-big btn-gold js-popup" href="#request">Оставить заявку</a>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

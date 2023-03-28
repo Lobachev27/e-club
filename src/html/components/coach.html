@@ -1,0 +1,35 @@
+<section class="coach">
+  <div class="coach__gradient"></div>
+  <div class="container">
+
+    @@include("./breadcrumbs.html", {
+      context: {
+        title: '',
+        lastBreadcrumb: 'Ирина Гаринова',
+        arr: [
+          {'text': 'Главная', 'link': './'},
+          {'text': 'Команда', 'link': './team.html'},
+        ],
+      }
+    })
+
+    <div class="coach__bg">
+      <div class="coach__orbit-one">
+        <div class="coach__ellipse-one"></div>
+      </div>
+      <div class="coach__orbit-two">
+        <div class="coach__ellipse-two"></div>
+        <div class="coach__ellipse-three"></div>
+      </div>
+    </div>
+    <div class="coach__img">
+      <img src="./img/coach-1.png" alt="">
+    </div>
+    <div class="coach__info">
+      <div class="coach__job">Инструктор тренажерного зала</div>
+      <h1 class="title title-h2"><span>Ирина</span> Гаринова</h1>
+      <div class="coach__description">Инструктор тренажёрного зала. Специализация: эстетика  тела, женский фитнес, силовой и функциональный тренинг. Ведения дневника питания каждого клиента, растяжка после каждой тренировки.</div>
+      <a class="btn btn-big btn-gold js-popup" href="#training">Записаться на пробную тренировку</a>
+    </div>
+  </div>
+</section>

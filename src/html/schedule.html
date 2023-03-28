@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Расписание занятий"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/breadcrumbs.html", {
+    context: {
+      title: '',
+      lastBreadcrumb: 'Расписание занятий',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+      ],
+    }
+  })
+
+  @@include("./components/schedule.html")
+
+  @@include("./components/programs.html", {
+    context: {
+      title: '<span>Популярные</span> программы тренировок',
+      request: false,
+      arr: [
+        {'class': 'box-small', 'image': './img/programs-07.jpg', 'caption': 'Body sculpt', 'description': 'Силовая тренировка, направленная на все группы мышц.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-04.jpg', 'caption': 'Школа бокса 18+', 'description': 'Секция профессионального бокса для взрослых.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-06.jpg', 'caption': 'Бокс', 'description': 'Бокс — тренировка, направленная на изучение техники классического бокса. ', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-20.jpg', 'caption': 'Stretch', 'description': 'Stretch — тренировка, направленная на развитие гибкости и растяжку. Занятия помогут мышцам восстановиться после силового тренинга, а также увеличить подвижность суставов, улучшить осанку, снять напряжение и стресс.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-18.jpg', 'caption': 'Basic workout', 'description': 'Basic Workout — тренировка с отягощениями, включающая в себя силовой и функциональный тренинг.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-05.jpg', 'caption': 'Тайский бокс', 'description': 'Тайский Бокс — боевое искусство Тайланда.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-25.jpg', 'caption': 'Bodyfit', 'description': 'Bodyfit  —  силовая тренировка, направленная на все основные мышечные группы.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-19.jpg', 'caption': 'Abs', 'description': 'ABS — силовая тренировка, направленная на проработку мышц пресса.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-21.jpg', 'caption': 'Multifit training', 'description': 'MultiFIT — авторская программа упражнений на силу и выносливость, состоящая, в основном, из аэробных упражнений, гимнастики и тяжёлой атлетики.  Это функциональная тренировка на все группы мышц. В программе используются естественные движения и нагрузки, требующие силы, гибкости и координации.  ', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-24.jpg', 'caption': 'Interval Mix', 'description': '', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-16.jpg', 'caption': 'TRX', 'description': 'TRX – функциональная тренировка со специальными тренировочными петлями. Занятие предполагает нагрузку на все группы мышц, подходит для людей любого уровня подготовки.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-42.jpg', 'caption': 'Yoga', 'description': '', 'link': './card-section.html',},
+      ],
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

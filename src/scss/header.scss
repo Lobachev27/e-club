@@ -1,0 +1,1316 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: $bg-main;
+  box-shadow: 0 4px 22px rgba(255,255,255, 0.05);
+  z-index: 50;
+
+  & .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 70px;
+    @media screen and ($mobile2) {
+      justify-content: space-between;
+    }
+    @media screen and ($tablet2) {
+      height: 80px;
+    }
+    @media screen and ($desktop1) {
+      height: 90px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s;
+
+    & img {
+      height: 36px;
+      @media screen and ($tablet2) {
+        height: 40px;
+      }
+      @media screen and ($desktop1) {
+        height: 44px;
+      }
+      @media screen and ($desktop2) {
+        height: 48px;
+      }
+    }
+
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+
+  &__info {
+    display: none;
+    @media screen and ($desktop1) {
+      display: block;
+    }
+  }
+
+  &__address {
+    @media screen and ($desktop1) {
+      display: flex;
+      align-items: center;
+    }
+
+    & span {
+      @media screen and ($desktop1) {
+        font-size: 13px;
+        color: $text-color-main-two;
+        line-height: 1.6em;
+        margin-left: 8px;
+      }
+      @media screen and ($desktop2) {
+        font-size: 14px;
+      }
+      @media screen and ($desktop3) {
+        font-size: 16px;
+      }
+    }
+
+    & svg {
+      @media screen and ($desktop1) {
+        width: 16px;
+        height: 16px;
+        fill: $main-color;
+      }
+      @media screen and ($desktop2) {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+
+  &__time {
+    @media screen and ($desktop1) {
+      font-size: 13px;
+      color: $text-color-main-two;
+      line-height: 1.6em;
+      margin-left: 24px;
+      @media screen and ($desktop2) {
+        font-size: 14px;
+        margin-left: 26px;
+      }
+      @media screen and ($desktop3) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  & .btn {
+    display: none;
+    @media screen and ($mobile2) {
+      display: flex;
+    }
+  }
+
+  &__phone {
+    display: none;
+    @media screen and ($tablet1) {
+      display: block;
+      transition: color 0.3s;
+    }
+    @media screen and ($tablet2) {
+      font-size: 16px;
+    }
+
+    &:hover {
+      color: $main-color-hover;
+    }
+  }
+
+  &__menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    @media screen and ($mobile2) {
+      margin-left: 0;
+    }
+
+    & span {
+      display: none;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-right: 12px;
+      transition: color 0.3s;
+      z-index: 2;
+      cursor: pointer;
+      @media screen and ($tablet1) {
+        display: inline;
+      }
+      @media screen and ($tablet2) {
+        font-size: 16px;
+      }
+    }
+
+    & svg {
+      width: 16px;
+      height: 16px;
+      fill: $text-color-main;
+      transition: fill 0.3s;
+      z-index: 2;
+      cursor: pointer;
+      @media screen and ($tablet2) {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &:hover {
+      & span {
+        color: $main-color-hover;
+      }
+
+      & svg {
+        fill: $main-color-hover;
+      }
+    }
+
+    &:before{
+      content :"";
+      width: 70px;
+      height: 70px;
+      background-color: $bg-main;
+      border-radius: 50%;
+      position: absolute;
+      top: 8px;
+      left: 10px;
+      transform: translate3d(-50%, -50%, 0) scale(1);
+      pointer-events: none;
+      will-change: width, height;
+      transition: transform .7s cubic-bezier(0.04, -0.1, 0.29, 0.98),
+      width .7s cubic-bezier(0.04, -0.1, 0.29, 0.98),
+      height .7s cubic-bezier(0.04, -0.1, 0.29, 0.98);
+      @media screen and ($tablet1) {
+        width: 120px;
+        left: 40px;
+      }
+      @media screen and ($desktop1) {
+        width: 140px;
+        height: 90px;
+        left: 45px;
+      }
+    }
+  }
+
+  &__email {
+    display: none;
+    @media screen and ($tablet1) {
+      display: block;
+      color: $main-color;
+      transition: color 0.3s;
+    }
+    @media screen and ($tablet2) {
+      font-size: 16px;
+    }
+
+    &:hover {
+      color: $main-color-hover;
+    }
+  }
+}
+
+.header-mobile {
+  width: 100%;
+  height: 100vh;
+  transform: translate3d(0, -100%, 0);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  position: fixed;
+  visibility: hidden;
+  pointer-events: none;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: opacity .3s ease-out;
+  z-index: 51;
+
+  &__bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $bg-main;
+  }
+
+  & .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 70px;
+    @media screen and ($mobile2) {
+      justify-content: space-between;
+    }
+    @media screen and ($tablet2) {
+      height: 80px;
+    }
+    @media screen and ($desktop1) {
+      height: 90px;
+    }
+  }
+
+  &__menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    @media screen and ($mobile2) {
+      margin-left: 0;
+    }
+
+    & span {
+      display: none;
+      font-size: 14px;
+      text-transform: uppercase;
+      margin-right: 12px;
+      transition: color 0.3s;
+      z-index: 2;
+      cursor: pointer;
+      @media screen and ($tablet1) {
+        display: inline;
+      }
+      @media screen and ($tablet2) {
+        font-size: 16px;
+      }
+    }
+
+    & svg {
+      width: 16px;
+      height: 16px;
+      fill: $text-color-main;
+      transition: fill 0.3s;
+      z-index: 2;
+      cursor: pointer;
+      @media screen and ($tablet2) {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &:hover {
+      & span {
+        color: $main-color-hover;
+      }
+
+      & svg {
+        fill: $main-color-hover;
+      }
+    }
+  }
+
+  & .header {
+    &__orbit{
+      position: absolute;
+      border: 1px solid #303033;
+      border-radius: 50%;
+
+      &.orbit-one{
+        width: 240px;
+        height: 240px;
+        top: -120px;
+        right: -60px;
+        background-color: #252528;
+        border: none;
+        @media screen and ($tablet1) {
+          width: 480px;
+          height: 480px;
+          top: -240px;
+          right: -120px;
+        }
+      }
+
+      &.orbit-two{
+        width: 450px;
+        height: 450px;
+        top: -225px;
+        right: -165px;
+        @media screen and ($tablet1) {
+          width: 900px;
+          height: 900px;
+          top: -450px;
+          right: -330px;
+        }
+      }
+
+      &.orbit-three{
+        width: 700px;
+        height: 700px;
+        top: -350px;
+        right: -290px;
+        @media screen and ($tablet1) {
+          width: 1360px;
+          height: 1360px;
+          top: -680px;
+          right: -560px;
+        }
+      }
+
+      &.orbit-four{
+        width: 1000px;
+        height: 1000px;
+        top: -500px;
+        right: -440px;
+        @media screen and ($tablet1) {
+          width: 1900px;
+          height: 1900px;
+          top: -950px;
+          right: -830px;
+        }
+      }
+
+      &.orbit-five{
+        width: 1350px;
+        height: 1350px;
+        top: -675px;
+        right: -615px;
+        @media screen and ($tablet1) {
+          width: 2540px;
+          height: 2540px;
+          top: -1270px;
+          right: -1150px;
+        }
+      }
+
+      &.orbit-six{
+        width: 1700px;
+        height: 1700px;
+        top: -850px;
+        right: -790px;
+        @media screen and ($tablet1) {
+          width: 3300px;
+          height: 3300px;
+          top: -1650px;
+          right: -1530px;
+        }
+      }
+    }
+
+    &__ellipse {
+      position: absolute;
+      /*background: url("../img/icon-ellipse-2.png") no-repeat;
+      background-size: 9px 9px;
+      background-position: center;*/
+      background-color: $bg-main;
+      border: 1px solid #303033;
+      border-radius: 50%;
+      width: 23px;
+      height: 23px;
+      top: -11px;
+      right: 49px;
+      transform: translate(-50%, -50%);
+      @media screen and ($tablet1) {
+        background-size: 10px 10px;
+        background-position: center;
+        width: 35px;
+        height: 35px;
+        top: -17px;
+        right: 103px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: $main-color-hover;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &.ellipse-one {
+        transform: rotate(-10deg) translateX(-225px);
+        -webkit-animation: orbit_menu1 7s linear infinite;
+        -moz-animation: orbit_menu1 7s linear infinite;
+        -o-animation: orbit_menu1 7s linear infinite;
+        animation: orbit_menu1 7s linear infinite;
+        @-webkit-keyframes orbit_menu1 {
+          from {
+            -webkit-transform: rotate(-10deg) translateX(-225px) rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(350deg) translateX(-225px) rotate(-360deg);
+          }
+        }
+        @-moz-keyframes orbit_menu1 {
+          from {
+            -moz-transform: rotate(-10deg) translateX(-225px) rotate(0deg);
+          }
+          to {
+            -moz-transform: rotate(350deg) translateX(-225px) rotate(-360deg);
+          }
+        }
+        @-o-keyframes orbit_menu1 {
+          from {
+            -o-transform: rotate(-10deg) translateX(-225px) rotate(0deg);
+          }
+          to {
+            -o-transform: rotate(350deg) translateX(-225px) rotate(-360deg);
+          }
+        }
+        @keyframes orbit_menu1 {
+          from {
+            transform: rotate(-10deg) translateX(-225px) rotate(0deg);
+          }
+          to {
+            transform: rotate(350deg) translateX(-225px) rotate(-360deg);
+          }
+        }
+        @media screen and ($tablet1) {
+          transform: rotate(-10deg) translateX(-450px);
+          -webkit-animation: orbit_menu1 15s linear infinite;
+          -moz-animation: orbit_menu1 15s linear infinite;
+          -o-animation: orbit_menu1 15s linear infinite;
+          animation: orbit_menu1 15s linear infinite;
+          @-webkit-keyframes orbit_menu1 {
+            from {
+              -webkit-transform: rotate(-10deg) translateX(-450px) rotate(0deg);
+            }
+            to {
+              -webkit-transform: rotate(350deg) translateX(-450px) rotate(-360deg);
+            }
+          }
+          @-moz-keyframes orbit_menu1 {
+            from {
+              -moz-transform: rotate(-10deg) translateX(-450px) rotate(0deg);
+            }
+            to {
+              -moz-transform: rotate(350deg) translateX(-450px) rotate(-360deg);
+            }
+          }
+          @-o-keyframes orbit_menu1 {
+            from {
+              -o-transform: rotate(-10deg) translateX(-450px) rotate(0deg);
+            }
+            to {
+              -o-transform: rotate(350deg) translateX(-450px) rotate(-360deg);
+            }
+          }
+          @keyframes orbit_menu1 {
+            from {
+              transform: rotate(-10deg) translateX(-450px) rotate(0deg);
+            }
+            to {
+              transform: rotate(350deg) translateX(-450px) rotate(-360deg);
+            }
+          }
+        }
+
+        &.ellipse-one-clone {
+          transform: rotate(-10deg) translateX(225px);
+          -webkit-animation: orbit_menu1_clone 7s linear infinite;
+          -moz-animation: orbit_menu1_clone 7s linear infinite;
+          -o-animation: orbit_menu1_clone 7s linear infinite;
+          animation: orbit_menu1_clone 7s linear infinite;
+          @-webkit-keyframes orbit_menu1_clone {
+            from {
+              -webkit-transform: rotate(-10deg) translateX(225px) rotate(0deg);
+            }
+            to {
+              -webkit-transform: rotate(350deg) translateX(225px) rotate(-360deg);
+            }
+          }
+          @-moz-keyframes orbit_menu1_clone {
+            from {
+              -moz-transform: rotate(-10deg) translateX(225px) rotate(0deg);
+            }
+            to {
+              -moz-transform: rotate(350deg) translateX(225px) rotate(-360deg);
+            }
+          }
+          @-o-keyframes orbit_menu1_clone {
+            from {
+              -o-transform: rotate(-10deg) translateX(225px) rotate(0deg);
+            }
+            to {
+              -o-transform: rotate(350deg) translateX(225px) rotate(-360deg);
+            }
+          }
+          @keyframes orbit_menu1_clone {
+            from {
+              transform: rotate(-10deg) translateX(225px) rotate(0deg);
+            }
+            to {
+              transform: rotate(350deg) translateX(225px) rotate(-360deg);
+            }
+          }
+          @media screen and ($tablet1) {
+            transform: rotate(-10deg) translateX(450px);
+            -webkit-animation: orbit_menu1_clone 15s linear infinite;
+            -moz-animation: orbit_menu1_clone 15s linear infinite;
+            -o-animation: orbit_menu1_clone 15s linear infinite;
+            animation: orbit_menu1_clone 15s linear infinite;
+            @-webkit-keyframes orbit_menu1_clone {
+              from {
+                -webkit-transform: rotate(-10deg) translateX(450px) rotate(0deg);
+              }
+              to {
+                -webkit-transform: rotate(350deg) translateX(450px) rotate(-360deg);
+              }
+            }
+            @-moz-keyframes orbit_menu1_clone {
+              from {
+                -moz-transform: rotate(-10deg) translateX(450px) rotate(0deg);
+              }
+              to {
+                -moz-transform: rotate(350deg) translateX(450px) rotate(-360deg);
+              }
+            }
+            @-o-keyframes orbit_menu1_clone {
+              from {
+                -o-transform: rotate(-10deg) translateX(450px) rotate(0deg);
+              }
+              to {
+                -o-transform: rotate(350deg) translateX(450px) rotate(-360deg);
+              }
+            }
+            @keyframes orbit_menu1_clone {
+              from {
+                transform: rotate(-10deg) translateX(450px) rotate(0deg);
+              }
+              to {
+                transform: rotate(350deg) translateX(450px) rotate(-360deg);
+              }
+            }
+          }
+        }
+      }
+
+      &.ellipse-two {
+        transform: rotate(88deg) translateX(350px);
+        -webkit-animation: orbit_menu2 10s linear infinite;
+        -moz-animation: orbit_menu2 10s linear infinite;
+        -o-animation: orbit_menu2 10s linear infinite;
+        animation: orbit_menu2 10s linear infinite;
+        @-webkit-keyframes orbit_menu2 {
+          from {
+            -webkit-transform: rotate(88deg) translateX(350px) rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(448deg) translateX(350px) rotate(-360deg);
+          }
+        }
+        @-moz-keyframes orbit_menu2 {
+          from {
+            -moz-transform: rotate(88deg) translateX(350px) rotate(0deg);
+          }
+          to {
+            -moz-transform: rotate(448deg) translateX(350px) rotate(-360deg);
+          }
+        }
+        @-o-keyframes orbit_menu2 {
+          from {
+            -o-transform: rotate(88deg) translateX(350px) rotate(0deg);
+          }
+          to {
+            -o-transform: rotate(448deg) translateX(350px) rotate(-360deg);
+          }
+        }
+        @keyframes orbit_menu2 {
+          from {
+            transform: rotate(88deg) translateX(350px) rotate(0deg);
+          }
+          to {
+            transform: rotate(448deg) translateX(350px) rotate(-360deg);
+          }
+        }
+        @media screen and ($tablet1) {
+          transform: rotate(88deg) translateX(679px);
+          -webkit-animation: orbit_menu2 20s linear infinite;
+          -moz-animation: orbit_menu2 20s linear infinite;
+          -o-animation: orbit_menu2 20s linear infinite;
+          animation: orbit_menu2 20s linear infinite;
+          @-webkit-keyframes orbit_menu2 {
+            from {
+              -webkit-transform: rotate(88deg) translateX(679px) rotate(0deg);
+            }
+            to {
+              -webkit-transform: rotate(448deg) translateX(679px) rotate(-360deg);
+            }
+          }
+          @-moz-keyframes orbit_menu2 {
+            from {
+              -moz-transform: rotate(88deg) translateX(679px) rotate(0deg);
+            }
+            to {
+              -moz-transform: rotate(448deg) translateX(679px) rotate(-360deg);
+            }
+          }
+          @-o-keyframes orbit_menu2 {
+            from {
+              -o-transform: rotate(88deg) translateX(679px) rotate(0deg);
+            }
+            to {
+              -o-transform: rotate(448deg) translateX(679px) rotate(-360deg);
+            }
+          }
+          @keyframes orbit_menu2 {
+            from {
+              transform: rotate(88deg) translateX(679px) rotate(0deg);
+            }
+            to {
+              transform: rotate(448deg) translateX(679px) rotate(-360deg);
+            }
+          }
+        }
+
+        &.ellipse-two-clone {
+          transform: rotate(88deg) translateX(-350px);
+          -webkit-animation: orbit_menu2_clone 10s linear infinite;
+          -moz-animation: orbit_menu2_clone 10s linear infinite;
+          -o-animation: orbit_menu2_clone 10s linear infinite;
+          animation: orbit_menu2_clone 10s linear infinite;
+          @-webkit-keyframes orbit_menu2_clone {
+            from {
+              -webkit-transform: rotate(88deg) translateX(-350px) rotate(0deg);
+            }
+            to {
+              -webkit-transform: rotate(448deg) translateX(-350px) rotate(-360deg);
+            }
+          }
+          @-moz-keyframes orbit_menu2_clone {
+            from {
+              -moz-transform: rotate(88deg) translateX(-350px) rotate(0deg);
+            }
+            to {
+              -moz-transform: rotate(448deg) translateX(-350px) rotate(-360deg);
+            }
+          }
+          @-o-keyframes orbit_menu2_clone {
+            from {
+              -o-transform: rotate(88deg) translateX(-350px) rotate(0deg);
+            }
+            to {
+              -o-transform: rotate(448deg) translateX(-350px) rotate(-360deg);
+            }
+          }
+          @keyframes orbit_menu2_clone {
+            from {
+              transform: rotate(88deg) translateX(-350px) rotate(0deg);
+            }
+            to {
+              transform: rotate(448deg) translateX(-350px) rotate(-360deg);
+            }
+          }
+          @media screen and ($tablet1) {
+            transform: rotate(88deg) translateX(679px);
+            -webkit-animation: orbit_menu2_clone 20s linear infinite;
+            -moz-animation: orbit_menu2_clone 20s linear infinite;
+            -o-animation: orbit_menu2_clone 20s linear infinite;
+            animation: orbit_menu2_clone 20s linear infinite;
+            @-webkit-keyframes orbit_menu2_clone {
+              from {
+                -webkit-transform: rotate(88deg) translateX(-679px) rotate(0deg);
+              }
+              to {
+                -webkit-transform: rotate(448deg) translateX(-679px) rotate(-360deg);
+              }
+            }
+            @-moz-keyframes orbit_menu2_clone {
+              from {
+                -moz-transform: rotate(88deg) translateX(-679px) rotate(0deg);
+              }
+              to {
+                -moz-transform: rotate(448deg) translateX(-679px) rotate(-360deg);
+              }
+            }
+            @-o-keyframes orbit_menu2_clone {
+              from {
+                -o-transform: rotate(88deg) translateX(-679px) rotate(0deg);
+              }
+              to {
+                -o-transform: rotate(448deg) translateX(-679px) rotate(-360deg);
+              }
+            }
+            @keyframes orbit_menu2_clone {
+              from {
+                transform: rotate(88deg) translateX(-679px) rotate(0deg);
+              }
+              to {
+                transform: rotate(448deg) translateX(-679px) rotate(-360deg);
+              }
+            }
+          }
+        }
+      }
+
+      &.ellipse-three {
+        transform: rotate(-45deg) translateX(-500px);
+        -webkit-animation: orbit_menu3 15s linear infinite;
+        -moz-animation: orbit_menu3 15s linear infinite;
+        -o-animation: orbit_menu3 15s linear infinite;
+        animation: orbit_menu3 15s linear infinite;
+        @-webkit-keyframes orbit_menu3 {
+          from {
+            -webkit-transform: rotate(-45deg) translateX(-500px) rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(315deg) translateX(-500px) rotate(-360deg);
+          }
+        }
+        @-moz-keyframes orbit_menu3 {
+          from {
+            -moz-transform: rotate(-45deg) translateX(-500px) rotate(0deg);
+          }
+          to {
+            -moz-transform: rotate(315deg) translateX(-500px) rotate(-360deg);
+          }
+        }
+        @-o-keyframes orbit_menu3 {
+          from {
+            -o-transform: rotate(-45deg) translateX(-500px) rotate(0deg);
+          }
+          to {
+            -o-transform: rotate(315deg) translateX(-500px) rotate(-360deg);
+          }
+        }
+        @keyframes orbit_menu3 {
+          from {
+            transform: rotate(-45deg) translateX(-500px) rotate(0deg);
+          }
+          to {
+            transform: rotate(315deg) translateX(-500px) rotate(-360deg);
+          }
+        }
+        @media screen and ($tablet1) {
+          transform: rotate(-45deg) translateX(-948px);
+          -webkit-animation: orbit_menu3 30s linear infinite;
+          -moz-animation: orbit_menu3 30s linear infinite;
+          -o-animation: orbit_menu3 30s linear infinite;
+          animation: orbit_menu3 30s linear infinite;
+          @-webkit-keyframes orbit_menu3 {
+            from {
+              -webkit-transform: rotate(-45deg) translateX(-948px) rotate(0deg);
+            }
+            to {
+              -webkit-transform: rotate(315deg) translateX(-948px) rotate(-360deg);
+            }
+          }
+          @-moz-keyframes orbit_menu3 {
+            from {
+              -moz-transform: rotate(-45deg) translateX(-948px) rotate(0deg);
+            }
+            to {
+              -moz-transform: rotate(315deg) translateX(-948px) rotate(-360deg);
+            }
+          }
+          @-o-keyframes orbit_menu3 {
+            from {
+              -o-transform: rotate(-45deg) translateX(-948px) rotate(0deg);
+            }
+            to {
+              -o-transform: rotate(315deg) translateX(-948px) rotate(-360deg);
+            }
+          }
+          @keyframes orbit_menu3 {
+            from {
+              transform: rotate(-45deg) translateX(-948px) rotate(0deg);
+            }
+            to {
+              transform: rotate(315deg) translateX(-948px) rotate(-360deg);
+            }
+          }
+        }
+
+        &.ellipse-three-clone {
+          transform: rotate(-45deg) translateX(500px);
+          -webkit-animation: orbit_menu3_clone 15s linear infinite;
+          -moz-animation: orbit_menu3_clone 15s linear infinite;
+          -o-animation: orbit_menu3_clone 15s linear infinite;
+          animation: orbit_menu3_clone 15s linear infinite;
+          @-webkit-keyframes orbit_menu3_clone {
+            from {
+              -webkit-transform: rotate(-45deg) translateX(500px) rotate(0deg);
+            }
+            to {
+              -webkit-transform: rotate(315deg) translateX(500px) rotate(-360deg);
+            }
+          }
+          @-moz-keyframes orbit_menu3_clone {
+            from {
+              -moz-transform: rotate(-45deg) translateX(500px) rotate(0deg);
+            }
+            to {
+              -moz-transform: rotate(315deg) translateX(500px) rotate(-360deg);
+            }
+          }
+          @-o-keyframes orbit_menu3_clone {
+            from {
+              -o-transform: rotate(-45deg) translateX(500px) rotate(0deg);
+            }
+            to {
+              -o-transform: rotate(315deg) translateX(500px) rotate(-360deg);
+            }
+          }
+          @keyframes orbit_menu3_clone {
+            from {
+              transform: rotate(-45deg) translateX(500px) rotate(0deg);
+            }
+            to {
+              transform: rotate(315deg) translateX(500px) rotate(-360deg);
+            }
+          }
+          @media screen and ($tablet1) {
+            transform: rotate(-45deg) translateX(948px);
+            -webkit-animation: orbit_menu3_clone 30s linear infinite;
+            -moz-animation: orbit_menu3_clone 30s linear infinite;
+            -o-animation: orbit_menu3_clone 30s linear infinite;
+            animation: orbit_menu3_clone 30s linear infinite;
+            @-webkit-keyframes orbit_menu3_clone {
+              from {
+                -webkit-transform: rotate(-45deg) translateX(948px) rotate(0deg);
+              }
+              to {
+                -webkit-transform: rotate(315deg) translateX(948px) rotate(-360deg);
+              }
+            }
+            @-moz-keyframes orbit_menu3_clone {
+              from {
+                -moz-transform: rotate(-45deg) translateX(948px) rotate(0deg);
+              }
+              to {
+                -moz-transform: rotate(315deg) translateX(948px) rotate(-360deg);
+              }
+            }
+            @-o-keyframes orbit_menu3_clone {
+              from {
+                -o-transform: rotate(-45deg) translateX(948px) rotate(0deg);
+              }
+              to {
+                -o-transform: rotate(315deg) translateX(948px) rotate(-360deg);
+              }
+            }
+            @keyframes orbit_menu3_clone {
+              from {
+                transform: rotate(-45deg) translateX(948px) rotate(0deg);
+              }
+              to {
+                transform: rotate(315deg) translateX(948px) rotate(-360deg);
+              }
+            }
+          }
+        }
+      }
+
+      &.ellipse-four {
+        transform: rotate(-45deg) translateX(-675px);
+        -webkit-animation: orbit_menu4 20s linear infinite;
+        -moz-animation: orbit_menu4 20s linear infinite;
+        -o-animation: orbit_menu4 20s linear infinite;
+        animation: orbit_menu4 20s linear infinite;
+        @-webkit-keyframes orbit_menu4 {
+          from {
+            -webkit-transform: rotate(-45deg) translateX(-675px) rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(315deg) translateX(-675px) rotate(-360deg);
+          }
+        }
+        @-moz-keyframes orbit_menu4 {
+          from {
+            -moz-transform: rotate(-45deg) translateX(-675px) rotate(0deg);
+          }
+          to {
+            -moz-transform: rotate(315deg) translateX(-675px) rotate(-360deg);
+          }
+        }
+        @-o-keyframes orbit_menu4 {
+          from {
+            -o-transform: rotate(-45deg) translateX(-675px) rotate(0deg);
+          }
+          to {
+            -o-transform: rotate(315deg) translateX(-675px) rotate(-360deg);
+          }
+        }
+        @keyframes orbit_menu4 {
+          from {
+            transform: rotate(-45deg) translateX(-675px) rotate(0deg);
+          }
+          to {
+            transform: rotate(315deg) translateX(-675px) rotate(-360deg);
+          }
+        }
+        @media screen and ($tablet1) {
+          transform: rotate(-45deg) translateX(-1269px);
+          -webkit-animation: orbit_menu4 40s linear infinite;
+          -moz-animation: orbit_menu4 40s linear infinite;
+          -o-animation: orbit_menu4 40s linear infinite;
+          animation: orbit_menu4 40s linear infinite;
+          @-webkit-keyframes orbit_menu4 {
+            from {
+              -webkit-transform: rotate(-45deg) translateX(-1269px) rotate(0deg);
+            }
+            to {
+              -webkit-transform: rotate(315deg) translateX(-1269px) rotate(-360deg);
+            }
+          }
+          @-moz-keyframes orbit_menu4 {
+            from {
+              -moz-transform: rotate(-45deg) translateX(-1269px) rotate(0deg);
+            }
+            to {
+              -moz-transform: rotate(315deg) translateX(-1269px) rotate(-360deg);
+            }
+          }
+          @-o-keyframes orbit_menu4 {
+            from {
+              -o-transform: rotate(-45deg) translateX(-1269px) rotate(0deg);
+            }
+            to {
+              -o-transform: rotate(315deg) translateX(-1269px) rotate(-360deg);
+            }
+          }
+          @keyframes orbit_menu4 {
+            from {
+              transform: rotate(-45deg) translateX(-1269px) rotate(0deg);
+            }
+            to {
+              transform: rotate(315deg) translateX(-1269px) rotate(-360deg);
+            }
+          }
+        }
+
+        &.ellipse-four-clone {
+          transform: rotate(-45deg) translateX(675px);
+          -webkit-animation: orbit_menu4_clone 20s linear infinite;
+          -moz-animation: orbit_menu4_clone 20s linear infinite;
+          -o-animation: orbit_menu4_clone 20s linear infinite;
+          animation: orbit_menu4_clone 20s linear infinite;
+          @-webkit-keyframes orbit_menu4_clone {
+            from {
+              -webkit-transform: rotate(-45deg) translateX(675px) rotate(0deg);
+            }
+            to {
+              -webkit-transform: rotate(315deg) translateX(675px) rotate(-360deg);
+            }
+          }
+          @-moz-keyframes orbit_menu4_clone {
+            from {
+              -moz-transform: rotate(-45deg) translateX(675px) rotate(0deg);
+            }
+            to {
+              -moz-transform: rotate(315deg) translateX(675px) rotate(-360deg);
+            }
+          }
+          @-o-keyframes orbit_menu4_clone {
+            from {
+              -o-transform: rotate(-45deg) translateX(675px) rotate(0deg);
+            }
+            to {
+              -o-transform: rotate(315deg) translateX(675px) rotate(-360deg);
+            }
+          }
+          @keyframes orbit_menu4_clone {
+            from {
+              transform: rotate(-45deg) translateX(675px) rotate(0deg);
+            }
+            to {
+              transform: rotate(315deg) translateX(675px) rotate(-360deg);
+            }
+          }
+          @media screen and ($tablet1) {
+            transform: rotate(-45deg) translateX(1269px);
+            -webkit-animation: orbit_menu4_clone 40s linear infinite;
+            -moz-animation: orbit_menu4_clone 40s linear infinite;
+            -o-animation: orbit_menu4_clone 40s linear infinite;
+            animation: orbit_menu4_clone 40s linear infinite;
+            @-webkit-keyframes orbit_menu4_clone {
+              from {
+                -webkit-transform: rotate(-45deg) translateX(1269px) rotate(0deg);
+              }
+              to {
+                -webkit-transform: rotate(315deg) translateX(1269px) rotate(-360deg);
+              }
+            }
+            @-moz-keyframes orbit_menu4_clone {
+              from {
+                -moz-transform: rotate(-45deg) translateX(1269px) rotate(0deg);
+              }
+              to {
+                -moz-transform: rotate(315deg) translateX(1269px) rotate(-360deg);
+              }
+            }
+            @-o-keyframes orbit_menu4_clone {
+              from {
+                -o-transform: rotate(-45deg) translateX(1269px) rotate(0deg);
+              }
+              to {
+                -o-transform: rotate(315deg) translateX(1269px) rotate(-360deg);
+              }
+            }
+            @keyframes orbit_menu4_clone {
+              from {
+                transform: rotate(-45deg) translateX(1269px) rotate(0deg);
+              }
+              to {
+                transform: rotate(315deg) translateX(1269px) rotate(-360deg);
+              }
+            }
+          }
+        }
+      }
+
+      &.ellipse-five {
+        transform: rotate(-25deg) translateX(-850px);
+        -webkit-animation: orbit_menu5 25s linear infinite;
+        -moz-animation: orbit_menu5 25s linear infinite;
+        -o-animation: orbit_menu5 25s linear infinite;
+        animation: orbit_menu5 25s linear infinite;
+        @-webkit-keyframes orbit_menu5 {
+          from {
+            -webkit-transform: rotate(-25deg) translateX(-850px) rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(335deg) translateX(-850px) rotate(-360deg);
+          }
+        }
+        @-moz-keyframes orbit_menu5 {
+          from {
+            -moz-transform: rotate(-25deg) translateX(-850px) rotate(0deg);
+          }
+          to {
+            -moz-transform: rotate(335deg) translateX(-850px) rotate(-360deg);
+          }
+        }
+        @-o-keyframes orbit_menu5 {
+          from {
+            -o-transform: rotate(-25deg) translateX(-850px) rotate(0deg);
+          }
+          to {
+            -o-transform: rotate(335deg) translateX(-850px) rotate(-360deg);
+          }
+        }
+        @keyframes orbit_menu5 {
+          from {
+            transform: rotate(-25deg) translateX(-850px) rotate(0deg);
+          }
+          to {
+            transform: rotate(335deg) translateX(-850px) rotate(-360deg);
+          }
+        }
+        @media screen and ($tablet1) {
+          transform: rotate(-25deg) translateX(-1269px);
+          -webkit-animation: orbit_menu5 50s linear infinite;
+          -moz-animation: orbit_menu5 50s linear infinite;
+          -o-animation: orbit_menu5 50s linear infinite;
+          animation: orbit_menu5 50s linear infinite;
+          @-webkit-keyframes orbit_menu5 {
+            from {
+              -webkit-transform: rotate(-25deg) translateX(-1650px) rotate(0deg);
+            }
+            to {
+              -webkit-transform: rotate(335deg) translateX(-1650px) rotate(-360deg);
+            }
+          }
+          @-moz-keyframes orbit_menu5 {
+            from {
+              -moz-transform: rotate(-25deg) translateX(-1650px) rotate(0deg);
+            }
+            to {
+              -moz-transform: rotate(335deg) translateX(-1650px) rotate(-360deg);
+            }
+          }
+          @-o-keyframes orbit_menu5 {
+            from {
+              -o-transform: rotate(-25deg) translateX(-1650px) rotate(0deg);
+            }
+            to {
+              -o-transform: rotate(335deg) translateX(-1650px) rotate(-360deg);
+            }
+          }
+          @keyframes orbit_menu5 {
+            from {
+              transform: rotate(-25deg) translateX(-1650px) rotate(0deg);
+            }
+            to {
+              transform: rotate(335deg) translateX(-1650px) rotate(-360deg);
+            }
+          }
+        }
+
+        &.ellipse-five-clone {
+          transform: rotate(-25deg) translateX(850px);
+          -webkit-animation: orbit_menu5_clone 25s linear infinite;
+          -moz-animation: orbit_menu5_clone 25s linear infinite;
+          -o-animation: orbit_menu5_clone 25s linear infinite;
+          animation: orbit_menu5_clone 25s linear infinite;
+          @-webkit-keyframes orbit_menu5_clone {
+            from {
+              -webkit-transform: rotate(-25deg) translateX(850px) rotate(0deg);
+            }
+            to {
+              -webkit-transform: rotate(335deg) translateX(850px) rotate(-360deg);
+            }
+          }
+          @-moz-keyframes orbit_menu5_clone {
+            from {
+              -moz-transform: rotate(-25deg) translateX(850px) rotate(0deg);
+            }
+            to {
+              -moz-transform: rotate(335deg) translateX(850px) rotate(-360deg);
+            }
+          }
+          @-o-keyframes orbit_menu5_clone {
+            from {
+              -o-transform: rotate(-25deg) translateX(850px) rotate(0deg);
+            }
+            to {
+              -o-transform: rotate(335deg) translateX(850px) rotate(-360deg);
+            }
+          }
+          @keyframes orbit_menu5_clone {
+            from {
+              transform: rotate(-25deg) translateX(850px) rotate(0deg);
+            }
+            to {
+              transform: rotate(335deg) translateX(850px) rotate(-360deg);
+            }
+          }
+          @media screen and ($tablet1) {
+            transform: rotate(-25deg) translateX(1269px);
+            -webkit-animation: orbit_menu5_clone 50s linear infinite;
+            -moz-animation: orbit_menu5_clone 50s linear infinite;
+            -o-animation: orbit_menu5_clone 50s linear infinite;
+            animation: orbit_menu5_clone 50s linear infinite;
+            @-webkit-keyframes orbit_menu5_clone {
+              from {
+                -webkit-transform: rotate(-25deg) translateX(1650px) rotate(0deg);
+              }
+              to {
+                -webkit-transform: rotate(335deg) translateX(1650px) rotate(-360deg);
+              }
+            }
+            @-moz-keyframes orbit_menu5_clone {
+              from {
+                -moz-transform: rotate(-25deg) translateX(1650px) rotate(0deg);
+              }
+              to {
+                -moz-transform: rotate(335deg) translateX(1650px) rotate(-360deg);
+              }
+            }
+            @-o-keyframes orbit_menu5_clone {
+              from {
+                -o-transform: rotate(-25deg) translateX(1650px) rotate(0deg);
+              }
+              to {
+                -o-transform: rotate(335deg) translateX(1650px) rotate(-360deg);
+              }
+            }
+            @keyframes orbit_menu5_clone {
+              from {
+                transform: rotate(-25deg) translateX(1650px) rotate(0deg);
+              }
+              to {
+                transform: rotate(335deg) translateX(1650px) rotate(-360deg);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+
+      &-item {
+        font-size: 20px;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 12px 0;
+        margin: 0;
+        transition: color 0.3s;
+        @media screen and ($mobile2) {
+          font-size: 22px;
+          padding: 10px 0;
+          margin: 5px 0;
+        }
+        @media screen and ($tablet1) {
+          font-size: 24px;
+          padding: 15px 0;
+          margin: 5px 0;
+        }
+        @media screen and ($desktop1) {
+          font-size: 26px;
+          margin: 10px 0;
+        }
+
+        &:hover {
+          color: $main-color-hover;
+        }
+      }
+    }
+  }
+
+  &__top {
+    position: relative;
+  }
+
+  &__content {
+    position: relative;
+    flex-grow: 1;
+
+    & .container {
+      height: 100%;
+      @media screen and ($tablet2) {
+        height: 100%;
+      }
+      @media screen and ($desktop1) {
+        height: 100%;
+      }
+    }
+  }
+
+  &__bottom {
+    position: relative;
+
+    & .container {
+      justify-content: center;
+      @media screen and ($mobile2) {
+        justify-content: center;
+      }
+      @media screen and ($tablet1) {
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.js-menu_activated {
+  overflow: hidden;
+
+  & .header-mobile{
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    will-change: opacity;
+    transition-duration: .2s;
+    transition-delay: .3s;
+    z-index: 51;
+  }
+
+  & .header__menu {
+    &:before{
+      width: 250vh;
+      height: 250vh;
+      transform: translate3d(-50%, -50%, 0) scale(5);
+      transition-duration: 1.5s;
+    }
+  }
+}

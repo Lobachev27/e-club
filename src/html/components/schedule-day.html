@@ -1,0 +1,11 @@
+<div class="schedule__list-col">
+  @@for (var i = 0; i < context.arr.length; i++) {
+  <div class="schedule__box">
+    <div class="schedule__box-time">`+context.arr[i].time+`</div>
+    <div class="schedule__box-name">`+context.arr[i].name+`</div>
+    <div class="schedule__box-coach">`+context.arr[i].coach+`</div>
+    `+context.arr[i].marker+`
+    <a class="schedule__box-link js-popup" href="#training"></a>
+  </div>
+  }
+</div>

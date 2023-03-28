@@ -1,0 +1,433 @@
+/*
+@import "partials/params";
+@import "partials/mixins";
+
+.card-section{
+  &_bg{
+    background: url("../img/boxing_bg.jpg") no-repeat 0px;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+  &_gradient{
+    position: absolute;
+    background: radial-gradient(circle closest-corner at 65% 25%, transparent, $bg-main);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 1;
+  }
+  &_request{
+    width: 370px;
+  }
+}
+
+.result{
+  margin-top: 80px;
+  width: 100%;
+  &_bg{
+    position: absolute;
+    background: url("../img/logo-bg-2.png") no-repeat 0px;
+    background-position: center;
+    background-size: cover;
+    width: 1174px;
+    height: 908px;
+    top: -150px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &_wrapper{
+    position: relative;
+    width: 100%;
+    margin-top: 80px;
+  }
+  &_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &_video{
+    position: relative;
+    display: flex;
+    flex-basis: calc(60% - 70px);
+    &_bg{
+      background: url("../img/boxing-video.jpg") no-repeat 0px;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 527px;
+    }
+  }
+  &_play-video {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    text-decoration: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    z-index: 100;
+    &:hover{
+      cursor: pointer;
+    }
+    &:hover .result_play-video_icon{
+      cursor: pointer;
+    }
+    &:hover .result_play-video_text{
+      color: $main-color-hover;
+    }
+    &_icon {
+      background: url("../img/icon-play.png") no-repeat 0px;
+      background-position: center;
+      background-size: cover;
+      width: 40px;
+      height: 40px;
+      z-index: 10;
+    }
+    &_text {
+      font-size: $text-size-m;
+      text-transform: uppercase;
+      padding-left: 20px;
+    }
+  }
+  &_use{
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(40% - 70px);
+  }
+  &_description{
+    font-size: $text-size-xs;
+    width: 430px;
+    margin: 15px 0;
+  }
+  &_advantages{
+    margin-top: 30px;
+    &_item{
+      display: flex;
+      flex-direction: row;
+      width: 270px;
+      margin-bottom: 40px;
+    }
+    &_icon{
+      &_wrapper{
+        position: relative;
+      }
+      &.heart{
+        background: url("../img/cardiogram.png") no-repeat 0px;
+        background-position: center;
+        border: 1px solid #39383a;
+        border-radius: 50%;
+        width: 42px;
+        height: 33px;
+        padding: 38px;
+      }
+      &.muscles{
+        background: url("../img/muscles.png") no-repeat 0px;
+        background-position: center;
+        border: 1px solid #39383a;
+        border-radius: 50%;
+        width: 36px;
+        height: 33px;
+        padding: 38px;
+      }
+      &.weight-loss{
+        background: url("../img/weight-loss.png") no-repeat 0px;
+        background-position: center;
+        border: 1px solid #39383a;
+        border-radius: 50%;
+        width: 44px;
+        height: 37px;
+        padding: 38px;
+      }
+      &.scale{
+        background: url("../img/scale.png") no-repeat 0px;
+        background-position: center;
+        border: 1px solid #39383a;
+        border-radius: 50%;
+        width: 33px;
+        height: 33px;
+        padding: 38px;
+      }
+      &.barbell{
+        background: url("../img/barbell.png") no-repeat 0px;
+        background-position: center;
+        border: 1px solid #39383a;
+        border-radius: 50%;
+        width: 38px;
+        height: 38px;
+        padding: 38px;
+      }
+    }
+    &_ellipse {
+      position: absolute;
+      background: url("../img/icon-ellipse.png") no-repeat 0px;
+      background-position: center;
+      background-color: $bg-main;
+      border: 1px solid #39383a;
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      top: 31px;
+      left: 31px;
+      &.one {
+        transform: rotate(45deg) translateX(38px);
+        -webkit-animation: orbit1 5s linear infinite;
+        -moz-animation: orbit1 5s linear infinite;
+        -o-animation: orbit1 5s linear infinite;
+        animation: orbit1 5s linear infinite;
+        @-webkit-keyframes orbit1 {
+          from {
+            -webkit-transform: rotate(45deg) translateX(38px) rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(405deg) translateX(38px) rotate(-360deg);
+          }
+        }
+        @-moz-keyframes orbit1 {
+          from {
+            -moz-transform: rotate(45deg) translateX(38px) rotate(0deg);
+          }
+          to {
+            -moz-transform: rotate(405deg) translateX(38px) rotate(-360deg);
+          }
+        }
+        @-o-keyframes orbit1 {
+          from {
+            -o-transform: rotate(45deg) translateX(38px) rotate(0deg);
+          }
+          to {
+            -o-transform: rotate(405deg) translateX(38px) rotate(-360deg);
+          }
+        }
+        @keyframes orbit1 {
+          from {
+            transform: rotate(45deg) translateX(38px) rotate(0deg);
+          }
+          to {
+            transform: rotate(405deg) translateX(38px) rotate(-360deg);
+          }
+        }
+      }
+      &.two {
+        transform: rotate(45deg) translateX(-38px);
+        -webkit-animation: orbit2 5s linear infinite;
+        -moz-animation: orbit2 5s linear infinite;
+        -o-animation: orbit2 5s linear infinite;
+        animation: orbit2 5s linear infinite;
+        @-webkit-keyframes orbit2 {
+          from {
+            -webkit-transform: rotate(45deg) translateX(-38px) rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(405deg) translateX(-38px) rotate(-360deg);
+          }
+        }
+        @-moz-keyframes orbit2 {
+          from {
+            -moz-transform: rotate(45deg) translateX(-38px) rotate(0deg);
+          }
+          to {
+            -moz-transform: rotate(405deg) translateX(-38px) rotate(-360deg);
+          }
+        }
+        @-o-keyframes orbit2 {
+          from {
+            -o-transform: rotate(45deg) translateX(-38px) rotate(0deg);
+          }
+          to {
+            -o-transform: rotate(405deg) translateX(-38px) rotate(-360deg);
+          }
+        }
+        @keyframes orbit2 {
+          from {
+            transform: rotate(45deg) translateX(-38px) rotate(0deg);
+          }
+          to {
+            transform: rotate(405deg) translateX(-38px) rotate(-360deg);
+          }
+        }
+      }
+    }
+    &_text{
+      font-size: $text-size-xs;
+      margin-left: 30px;
+      margin-top: 10px;
+      width: 160px;
+      & span{
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1630px) {
+  .result{
+    &_video{
+      flex-basis: calc(70% - 30px);
+      height: 470px;
+      &_bg{
+        background: url("../img/boxing-video.jpg") no-repeat 0px;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 470px;
+      }
+    }
+    &_use{
+      flex-basis: calc(30% - 30px);
+    }
+    &_description{
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .card-section{
+    &_gradient{
+      background: radial-gradient(circle closest-corner at 65% 40%, transparent, $bg-main);
+    }
+  }
+
+  .result{
+    &_bg{
+      width: 940px;
+      height: 700px;
+    }
+    &_wrapper{
+      margin-top: 60px;
+    }
+    &_box{
+      flex-direction: column;
+      width: 100%;
+    }
+    &_video{
+      flex-basis: 100%;
+      height: 600px;
+      &_bg{
+        background: url("../img/boxing-video.jpg") no-repeat 0px;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 600px;
+      }
+    }
+    &_use{
+      flex-basis: 100%;
+      order: -1;
+    }
+    &_description{
+      width: 100%;
+      margin: 10px 0;
+    }
+    &_advantages{
+      display: flex;
+      flex-direction: row;
+      &_item{
+        margin-right: 50px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .card-section{
+    &_bg{
+      background-position-x: 60%;
+      background-position-y: 50%;
+    }
+  }
+  .result{
+    &_bg{
+      width: 720px;
+      height: 500px;
+      top: -80px;
+    }
+    &_video{
+      height: 450px;
+      &_bg{
+        height: 450px;
+      }
+    }
+    &_advantages{
+      display: flex;
+      flex-direction: column;
+      &_item{
+        margin-right: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .result{
+    &_bg{
+      width: 540px;
+      height: 300px;
+      top: 0px;
+    }
+    &_video{
+      height: 350px;
+      &_bg{
+        height: 350px;
+      }
+    }
+    &_play-video {
+      width: 250px;
+      &_icon {
+        width: 28px;
+        height: 28px;
+      }
+      &_text {
+        font-size: $text-size-xs;
+        padding-left: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .result{
+    margin-top: 20px;
+    &_bg{
+      width: 100%;
+      height: 60vw;
+      top: 0px;
+    }
+    &_video{
+      height: 60vw;
+      &_bg{
+        height: 60vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-section{
+    &_request{
+      width: 280px;
+      padding: 12px 20px !important;
+    }
+  }
+
+  .result{
+    &_description{
+      font-size: $text-size-xxs;
+    }
+    &_advantages{
+      &_item{
+        width: 100%;
+      }
+      &_text{
+        font-size: $text-size-xxs;
+        width: 140px;
+      }
+    }
+  }
+}
+*/

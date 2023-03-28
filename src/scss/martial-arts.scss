@@ -1,0 +1,54 @@
+/*
+@import "partials/params";
+@import "partials/mixins";
+
+.martial-arts {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - 200px);
+  margin: 0 auto 60px;
+  &_bg {
+    position: absolute;
+    background: url("../img/martial-arts-bg.jpg");
+    background-position: right;
+    background-size: cover;
+    width: 100%;
+    min-height: 780px;
+    height: calc(100vh - 200px);
+    max-height: 900px;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .martial-arts {
+    &_bg {
+      background-position-x: 95%;
+      background-position-y: center;
+      min-height: 600px;
+      height: 600px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .martial-arts {
+    &_bg {
+      background-position-x: 90%;
+      min-height: 500px;
+      height: 500px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .martial-arts {
+    &_bg {
+      background-position-x: 90%;
+      min-height: 320px;
+      height: 320px;
+    }
+  }
+}
+*/

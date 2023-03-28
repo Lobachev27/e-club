@@ -1,0 +1,52 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.breadcrumbs {
+  position: relative;
+  width: 100%;
+  margin: 20px 0;
+  @media screen and ($tablet1) {
+    margin: 24px 0;
+  }
+  @media screen and ($desktop1) {
+    margin: 32px 0;
+  }
+
+  &__list {
+    position: relative;
+    display: block;
+    line-height: 1.5em;
+    width: 100%;
+    margin-top: 10px;
+
+    & span {
+      display: inline-block;
+      padding: 0 6px;
+      color: $text-color-main-two;
+      cursor: default;
+    }
+  }
+
+  &__link {
+    display: inline;
+    font-size: 13px;
+    font-weight: 400;
+    color: $text-color-main;
+    transition: color 0.3s;
+    @media screen and ($tablet1) {
+      font-size: 14px;
+    }
+    @media screen and ($desktop1) {
+      font-size: 14px;
+    }
+
+    &:hover {
+      color: $main-color-hover;
+    }
+
+    &:last-child {
+      color: $text-color-main-two;
+      cursor: default;
+    }
+  }
+}

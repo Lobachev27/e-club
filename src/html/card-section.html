@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Школа бокса 18+"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/section.html")
+
+  @@include("./components/result.html")
+
+  <section class="team">
+    <div class="container">
+      <div class="row">
+        <h2 class="title title-h2"><span>Тренерский </span>состав</h2>
+      </div>
+      <div class="team__list">
+        <div class="team__box box-max">
+          <div class="team__box-bg">
+            <div class="team__box-orbit-one">
+              <div class="team__box-ellipse-one"></div>
+            </div>
+            <div class="team__box-orbit-two">
+              <div class="team__box-ellipse-two"></div>
+              <div class="team__box-ellipse-three"></div>
+            </div>
+          </div>
+          <div class="team__box-img">
+            <img src="./img/coach-4.png" alt="">
+          </div>
+          <div class="team__box-info">
+            <div class="team__box-job">Инструктор по боксу</div>
+            <div class="team__box-name">Валерий Железкин</div>
+            <div class="team__box-description">Мастер тренер  по боксу. Дипломированный и лицензированный специалист. Тренировки проводит для мужчин, женщин и детей. Опыт работы более 9 лет. Координатор зала единоборств.</div>
+          </div>
+          <a class="team__box-link" href="./card-trainer.html"></a>
+        </div>
+
+
+        <div class="team__box box-max">
+          <div class="team__box-bg">
+            <div class="team__box-orbit-one">
+              <div class="team__box-ellipse-one"></div>
+            </div>
+            <div class="team__box-orbit-two">
+              <div class="team__box-ellipse-two"></div>
+              <div class="team__box-ellipse-three"></div>
+            </div>
+          </div>
+          <div class="team__box-img">
+            <img src="./img/coach-5.png" alt="">
+          </div>
+          <div class="team__box-info">
+            <div class="team__box-job">Инструктор по боксу</div>
+            <div class="team__box-name">Юрий Ильин</div>
+            <div class="team__box-description">Мастер тренер по боксу. Лицензированный специалист. Судья первый категории ( входит в состав московской коллегии). Тренировки проводит для мужчин, женщин, детей. Опыт работы более 15 лет.</div>
+          </div>
+          <a class="team__box-link" href="./card-trainer.html"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="schedule">
+    <div class="container">
+      <div class="row">
+        <h2 class="title title-h2"><span>Расписание </span>занятий</h2>
+      </div>
+    </div>
+
+    <div class="schedule__wrapper">
+      <div class="schedule__table">
+        <div class="schedule__topic">
+          <div class="schedule__topic-col">Понедельник</div>
+          <div class="schedule__topic-col">Вторник</div>
+          <div class="schedule__topic-col">Среда</div>
+          <div class="schedule__topic-col">Четверг</div>
+          <div class="schedule__topic-col">Пятница</div>
+          <div class="schedule__topic-col">Суббота</div>
+          <div class="schedule__topic-col">Воскресение</div>
+        </div>
+        <div class="schedule__list">
+
+          @@include("./components/schedule-day.html", {
+            context: {
+              arr: [
+                {'time': '21:00	— 22:00', 'name': 'Школа Бокса 18+', 'coach': 'Юрий Ильин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              ],
+            }
+          })
+
+          @@include("./components/schedule-day.html", {
+            context: {
+            arr: [],
+            }
+          })
+
+          @@include("./components/schedule-day.html", {
+            context: {
+              arr: [
+                {'time': '21:00	— 22:00', 'name': 'Школа Бокса 18+', 'coach': 'Юрий Ильин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              ],
+            }
+          })
+
+          @@include("./components/schedule-day.html", {
+            context: {
+              arr: [],
+            }
+          })
+
+          @@include("./components/schedule-day.html", {
+            context: {
+              arr: [
+                {'time': '21:00	— 22:00', 'name': 'Школа Бокса 18+', 'coach': 'Юрий Ильин', 'marker': '<div class="schedule__box-marker">₽</div>',},
+              ],
+            }
+          })
+
+          @@include("./components/schedule-day.html", {
+            context: {
+            arr: [],
+            }
+          })
+
+          @@include("./components/schedule-day.html", {
+            context: {
+              arr: [],
+            }
+          })
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <a class="btn btn-big btn-gold js-popup" href="#training">Записаться на пробную тренировку</a>
+    </div>
+  </section>
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

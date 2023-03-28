@@ -1,0 +1,14 @@
+<div class="breadcrumbs">
+  <div class="container">
+    @@if(context.title){
+    <h1 class="title title-h1">@@context.title</h1>
+    }
+    <div class="breadcrumbs__list">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <a class="breadcrumbs__link" href="`+context.arr[i].link+`">`+context.arr[i].text+`</a>
+      <span>&#8210;</span>
+      }
+      <p class="breadcrumbs__link">@@context.lastBreadcrumb</p>
+    </div>
+  </div>
+</div>

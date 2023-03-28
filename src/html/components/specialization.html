@@ -1,0 +1,21 @@
+<section class="specialization">
+  <div class="container">
+    <div class="row">
+      <h2 class="title title-h2"><span>Специализация</span> тренера</h2>
+    </div>
+    <div class="specialization__list">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="specialization__box">
+        <div class="specialization__box-img">
+          <div class="specialization__box-orbit">
+            <div class="specialization__box-ellipse-one"></div>
+            <div class="specialization__box-ellipse-two"></div>
+          </div>
+          <div class="specialization__box-icon">`+context.arr[i].icon+`</div>
+        </div>
+        <div class="specialization__box-caption">`+context.arr[i].caption+`</div>
+      </div>
+      }
+    </div>
+  </div>
+</section>

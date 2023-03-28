@@ -1,0 +1,35 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.title {
+  font-weight: 300;
+
+  & span {
+    font-weight: 700;
+  }
+
+  &.title-h1 {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    @media screen and ($tablet1) {
+      font-size: 26px;
+    }
+    @media screen and ($desktop1) {
+      font-size: 30px;
+    }
+  }
+
+  &.title-h2 {
+    font-size: 22px;
+    line-height: 1.4em;
+    text-transform: uppercase;
+    @media screen and ($tablet1) {
+      font-size: 26px;
+    }
+    @media screen and ($desktop1) {
+      font-size: 30px;
+    }
+  }
+}

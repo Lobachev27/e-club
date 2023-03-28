@@ -1,0 +1,364 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.team {
+  position: relative;
+  margin: 60px 0;
+  z-index: 3;
+  @media screen and ($tablet1) {
+    margin: 80px 0;
+  }
+  @media screen and ($desktop1) {
+    margin: 100px 0;
+  }
+
+  & .row {
+    align-items: center;
+  }
+
+  &__list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    @media screen and ($tablet2) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px;
+    }
+    @media screen and ($desktop2) {
+      display: flex;
+      flex-wrap: wrap;
+      grid-gap: initial;
+    }
+  }
+
+  &__box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: $bg-block;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+    @media screen and ($mobile3) {
+      flex-direction: row;
+    }
+    @media screen and ($tablet2) {
+      margin-bottom: 0;
+    }
+
+    &.box-max {
+      @media screen and ($desktop2) {
+        width: calc(50% - 12px);
+        margin-bottom: 24px;
+      }
+
+      &:nth-child(odd) {
+        @media screen and ($desktop2) {
+          margin-right: 24px;
+        }
+      }
+
+      &:nth-child(even) {
+        @media screen and ($desktop2) {
+          margin-right: 0;
+        }
+      }
+    }
+
+    &.box-middle {
+      @media screen and ($desktop2) {
+        width: calc(33.33% - 16px);
+        margin-right: 24px;
+        margin-bottom: 0;
+      }
+
+      & .team__box {
+        &-bg {
+          right: 13%;
+        }
+
+        &-img {
+          @media screen and ($desktop2) {
+            left: 37%;
+          }
+        }
+      }
+    }
+
+    &.box-request {
+      background: url("../img/paper-plane.png") no-repeat;
+      background-position: right bottom;
+      background-size: cover;
+      margin-bottom: 0;
+      @media screen and ($desktop2) {
+        width: calc(33.33% - 16px);
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+
+      & .team__box {
+        &-info {
+          padding: 30px 20px;
+          @media screen and ($mobile3) {
+            position: relative;
+            width: 100%;
+            padding: 40px 25px;
+          }
+          @media screen and ($tablet1) {
+            padding: 60px 25px;
+          }
+          @media screen and ($desktop2) {
+            padding: 40px 25px;
+          }
+
+          & .title {
+            line-height: 1.5em;
+          }
+
+          & .btn {
+            margin-top: 20px;
+            @media screen and ($tablet1) {
+              margin-top: 30px;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover {
+      background-color: $bg-block-hover;
+
+      & .team__box {
+        &-job {
+          color: $main-color-hover;
+        }
+      }
+    }
+
+    &-bg {
+      position: absolute;
+      bottom: 26%;
+      right: 50%;
+      transform: translate(50%, 50%);
+      width: calc(120vw - 32px);
+      height: calc(120vw - 32px);
+      pointer-events: none;
+      z-index: 1;
+      @media screen and ($mobile3) {
+        bottom: 40%;
+        right: 20%;
+        width: calc(80vw - 32px);
+        height: calc(80vw - 32px);
+      }
+      @media screen and ($tablet1) {
+        bottom: 40%;
+        right: 20%;
+        width: calc(60vw - 32px);
+        height: calc(60vw - 32px);
+      }
+      @media screen and ($tablet2) {
+        width: calc(40vw - 64px);
+        height: calc(40vw - 64px);
+      }
+      @media screen and ($desktop2) {
+        width: 440px;
+        height: 440px;
+      }
+    }
+
+    &-orbit {
+      &-one,
+      &-two {
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid #303033;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
+
+      &-one {
+        width: 100%;
+        height: 100%;
+        -moz-animation: 10s linear 0s normal none infinite running circle-rotate;
+        -webkit-animation: 10s linear 0s normal none infinite running circle-rotate;
+        animation: 10s linear 0s normal none infinite running circle-rotate;
+      }
+
+      &-two {
+        width: 83%;
+        height: 83%;
+        -moz-animation: 8s linear 0s normal none infinite running circle-rotate;
+        -webkit-animation: 8s linear 0s normal none infinite running circle-rotate;
+        animation: 8s linear 0s normal none infinite running circle-rotate;
+      }
+    }
+
+    &-ellipse {
+      &-one,
+      &-two,
+      &-three {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: $bg-main;
+        border: 1px solid #303033;
+        transform: translate(-50%, -50%);
+        z-index: 20;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 7px;
+          height: 7px;
+          background-color: $main-color-hover;
+          border-radius: 50%;
+        }
+      }
+
+      &-one {
+        top: 14%;
+        left: 85%;
+      }
+
+      &-two {
+        top: 2.5%;
+        left: 35%;
+      }
+
+      &-three {
+        top: 97.5%;
+        left: 65%;
+      }
+    }
+
+    &-img {
+      position: relative;
+      width: 100%;
+      padding-top: 100%;
+      order: 2;
+      z-index: 1;
+      @media screen and ($mobile3) {
+        padding-top: 70%;
+        left: 30%;
+      }
+      @media screen and ($tablet1) {
+        padding-top: 50%;
+      }
+      @media screen and ($tablet2) {
+        padding-top: 60%;
+      }
+      @media screen and ($desktop2) {
+        padding-top: 400px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle closest-corner at 50% 60%, #3f3f44, transparent);
+        pointer-events: none;
+        @media screen and ($mobile3) {
+          background: radial-gradient(circle closest-corner at 60% 50%, #3f3f44, transparent);
+        }
+      }
+
+      & img {
+        position: absolute;
+        top: -8%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 120%;
+        object-position: center;
+        object-fit: contain;
+        @media screen and ($mobile3) {
+          top: 0;
+          height: 100%;
+        }
+      }
+    }
+
+    &-info {
+      position: relative;
+      width: 100%;
+      padding: 20px;
+      z-index: 2;
+      @media screen and ($mobile3) {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 25px;
+        width: 60%;
+        height: 100%;
+      }
+      @media screen and ($tablet2) {
+        width: 68%;
+        padding: 20px;
+      }
+      @media screen and ($desktop1) {
+        width: 65%;
+        padding: 30px;
+      }
+    }
+
+    &-job {
+      font-size: 13px;
+      color: $main-color;
+      line-height: 1.5em;
+      margin-bottom: 15px;
+      transition: color 0.3s;
+      @media screen and ($tablet2) {
+        margin-bottom: 10px;
+      }
+      @media screen and ($desktop1) {
+        margin-bottom: 15px;
+      }
+    }
+
+    &-name {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.2em;
+      margin-bottom: 15px;
+      @media screen and ($tablet2) {
+        margin-bottom: 10px;
+      }
+      @media screen and ($desktop1) {
+        font-size: 24px;
+        margin-bottom: 15px;
+      }
+    }
+
+    &-description {
+      font-size: 12px;
+      line-height: 1.5em;
+      color: $text-color-main-two;
+      @media screen and ($desktop1) {
+        font-size: 13px;
+      }
+    }
+
+    &-link {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+    }
+  }
+}

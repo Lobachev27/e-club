@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Танцы для детей</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/latest/normalize.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900&amp;subset=cyrillic"
+    />
+    <link rel="stylesheet" href="./css/swiper.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./css/favicon.ico" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <a class="header__logo" href="./">
+          <img src="./img/logo.png" alt="" />
+        </a>
+        <div class="header__info">
+          <div class="header__address">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.com/svgjs"
+              width="512"
+              height="512"
+              x="0"
+              y="0"
+              viewBox="0 0 32 32"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+              class=""
+            >
+              <g>
+                <path
+                  d="M16 1A11 11 0 0 0 5 12c0 5.81 9.8 18.1 10.22 18.63a1 1 0 0 0 1.56 0C17.2 30.1 27 17.81 27 12A11 11 0 0 0 16 1zm0 14a4 4 0 1 1 4-4 4 4 0 0 1-4 4z"
+                  data-original="#000000"
+                  class=""
+                ></path>
+              </g>
+            </svg>
+            <span>Москва, ТЦ «Солнцево-Парк», ул. Лётчика Ульянина, д. 5</span>
+          </div>
+          <div class="header__time">Время работы клуба: 06:00 - 00:00</div>
+        </div>
+        <a class="btn btn-small btn-transparent js-popup" href="#call"
+          >Позвоните мне</a
+        >
+        <a class="header__phone" href="tel:+74951504557">+7 (495) 150-45-57</a>
+        <div class="header__menu js-menu__toggle">
+          <span>Меню</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:svgjs="http://svgjs.com/svgjs"
+            width="512"
+            height="512"
+            x="0"
+            y="0"
+            viewBox="0 0 464.205 464.205"
+            style="enable-background: new 0 0 512 512"
+            xml:space="preserve"
+            class=""
+          >
+            <g>
+              <path
+                d="M435.192 406.18H29.013C12.989 406.18 0 393.19 0 377.167s12.989-29.013 29.013-29.013h406.18c16.023 0 29.013 12.99 29.013 29.013-.001 16.023-12.99 29.013-29.014 29.013zM435.192 261.115H29.013C12.989 261.115 0 248.126 0 232.103s12.989-29.013 29.013-29.013h406.18c16.023 0 29.013 12.989 29.013 29.013s-12.99 29.012-29.014 29.012zM435.192 116.051H29.013C12.989 116.051 0 103.062 0 87.038s12.989-29.013 29.013-29.013h406.18c16.023 0 29.013 12.989 29.013 29.013s-12.99 29.013-29.014 29.013z"
+                data-original="#000000"
+                class=""
+              ></path>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <div class="header-mobile">
+      <div class="header-mobile__bg">
+        <div class="header__orbit orbit-one"></div>
+        <div class="header__orbit orbit-two"></div>
+        <div class="header__orbit orbit-three"></div>
+        <div class="header__orbit orbit-four"></div>
+        <div class="header__orbit orbit-five"></div>
+        <div class="header__orbit orbit-six"></div>
+        <div class="header__ellipse ellipse-one"></div>
+        <div class="header__ellipse ellipse-one ellipse-one-clone"></div>
+        <div class="header__ellipse ellipse-two"></div>
+        <div class="header__ellipse ellipse-two ellipse-two-clone"></div>
+        <div class="header__ellipse ellipse-three"></div>
+        <div class="header__ellipse ellipse-three ellipse-three-clone"></div>
+        <div class="header__ellipse ellipse-four"></div>
+        <div class="header__ellipse ellipse-four ellipse-four-clone"></div>
+        <div class="header__ellipse ellipse-five"></div>
+        <div class="header__ellipse ellipse-five ellipse-five-clone"></div>
+      </div>
+      <div class="header-mobile__top">
+        <div class="container">
+          <a class="header__logo" href="./">
+            <img src="./img/logo.png" alt="" />
+          </a>
+          <div class="header-mobile__menu js-menu__toggle">
+            <span>Закрыть</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.com/svgjs"
+              width="512"
+              height="512"
+              x="0"
+              y="0"
+              viewBox="0 0 492 492"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+              class=""
+            >
+              <g>
+                <path
+                  d="M300.188 246 484.14 62.04c5.06-5.064 7.852-11.82 7.86-19.024 0-7.208-2.792-13.972-7.86-19.028L468.02 7.872C462.952 2.796 456.196.016 448.984.016c-7.2 0-13.956 2.78-19.024 7.856L246.008 191.82 62.048 7.872C56.988 2.796 50.228.016 43.02.016c-7.2 0-13.96 2.78-19.02 7.856L7.872 23.988c-10.496 10.496-10.496 27.568 0 38.052L191.828 246 7.872 429.952C2.808 435.024.02 441.78.02 448.984c0 7.204 2.788 13.96 7.852 19.028l16.124 16.116c5.06 5.072 11.824 7.856 19.02 7.856 7.208 0 13.968-2.784 19.028-7.856l183.96-183.952 183.952 183.952c5.068 5.072 11.824 7.856 19.024 7.856h.008c7.204 0 13.96-2.784 19.028-7.856l16.12-16.116c5.06-5.064 7.852-11.824 7.852-19.028 0-7.204-2.792-13.96-7.852-19.028L300.188 246z"
+                  data-original="#000000"
+                  class=""
+                ></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="header-mobile__content">
+        <div class="container">
+          <nav class="header__nav">
+            <a class="header__nav-item" href="./club.html">О клубе</a>
+            <a class="header__nav-item" href="./martial-arts.html"
+              >Единоборства</a
+            >
+            <a class="header__nav-item" href="./fitness.html">Фитнес</a>
+            <a class="header__nav-item" href="./children.html"
+              >Детский фитнес</a
+            >
+            <a class="header__nav-item" href="./team.html">Команда</a>
+            <a class="header__nav-item" href="./schedule.html">Расписание</a>
+            <a class="header__nav-item" href="./blog.html">Блог</a>
+            <a class="header__nav-item" href="./contacts.html">Контакты</a>
+          </nav>
+        </div>
+      </div>
+      <div class="header-mobile__bottom">
+        <div class="container">
+          <div class="header__info">
+            <div class="header__address">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                xmlns:svgjs="http://svgjs.com/svgjs"
+                width="512"
+                height="512"
+                x="0"
+                y="0"
+                viewBox="0 0 32 32"
+                style="enable-background: new 0 0 512 512"
+                xml:space="preserve"
+                class=""
+              >
+                <g>
+                  <path
+                    d="M16 1A11 11 0 0 0 5 12c0 5.81 9.8 18.1 10.22 18.63a1 1 0 0 0 1.56 0C17.2 30.1 27 17.81 27 12A11 11 0 0 0 16 1zm0 14a4 4 0 1 1 4-4 4 4 0 0 1-4 4z"
+                    data-original="#000000"
+                    class=""
+                  ></path>
+                </g>
+              </svg>
+              <span
+                >Москва, ТЦ «Солнцево-Парк», ул. Лётчика Ульянина, д. 5</span
+              >
+            </div>
+            <div class="header__time">Время работы клуба: 06:00 - 00:00</div>
+          </div>
+          <a class="header__email" href="mailto:info@e-club.fit"
+            >info@e-club.fit</a
+          >
+          <a class="btn btn-small btn-transparent js-popup" href="#call"
+            >Позвоните мне</a
+          >
+          <a class="header__phone" href="tel:+74951504557"
+            >+7 (495) 150-45-57</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <main class="main">
+      <div class="breadcrumbs">
+        <div class="container">
+          <h1 class="title title-h1">Блог</h1>
+
+          <div class="breadcrumbs__list">
+            <a class="breadcrumbs__link" href="./">Главная</a>
+            <span>&#8210;</span>
+
+            <a class="breadcrumbs__link" href="./blog.html">Блог</a>
+            <span>&#8210;</span>
+
+            <p class="breadcrumbs__link">Танцы для детей</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-bg">
+        <img src="./img/blog_bg.jpg" alt="" />
+      </div>
+
+      <section class="article">
+        <div class="container">
+          <div class="article__box">
+            <div class="row">
+              <div class="article__box-date">06/05/2019</div>
+              <div class="article__box-marker marker-article">Статьи</div>
+            </div>
+            <h1 class="title title-h1">Танцы для детей</h1>
+            <div class="article__box-img">
+              <img src="./img/blog-05.jpg" alt="" />
+            </div>
+            <div class="article__box-text">
+              <p>
+                Удивительные вещи таит в себе искусство танца. Это
+                самовыражение, грация и новое жизненное восприятие – все то, что
+                так необходимо в сложной современной жизни. Танцы для детей –
+                возможность для Вашего ребенка открыть себя. Сегодня он просто
+                радуется танцу, а завтра откроется для развития спорта и
+                искусства, тяги ко всему новому.
+              </p>
+              <br />
+              <p>
+                <b>Польза от занятий танцами с раннего возраста</b> очевидна.
+                Ребенок получает возможность активного и правильного движения,
+                соединенного в гармонии с музыкой.
+              </p>
+              <br />
+              <p>Что дают занятия танцем:</p>
+              <ul>
+                <li>Элементы тренировок.</li>
+                <li>Красивую осанку и уверенную походку.</li>
+                <li>Изучение танца и ритма.</li>
+                <li>Отличное настроение и эмоциональную разгрузку.</li>
+              </ul>
+              <br />
+              <p>
+                <b>Школа в Солнцево</b> направлена на индивидуальное развитие
+                детей. Здесь все для озорных любителей танца – много света и
+                музыки, прыжков, хлопков, упражнений. Ребята, которые занимаются
+                танцами, активны, у них правильное чувство ритма и хорошая
+                пластика.
+              </p>
+              <br />
+              <p>
+                Детские группы хип-хоп – конечно, наше преимущество. Мы с
+                радостью замечаем, как в сочетании с музыкой, во время занятий
+                развивается и динамика движений.
+              </p>
+              <br />
+              <p>
+                Ребята учатся понимать, что такое танец, и с удивлением
+                обнаруживают, что это не заданный формат по образцу.
+                Неудивительно поэтому, что вскоре родители замечают улучшение
+                общего самочувствия и проявление интереса к занятиям спортом и
+                танцем.
+              </p>
+              <br />
+              <p><b>Какое танцевальное направление выбрать?</b></p>
+              <p>
+                Ответ на этот вопрос – устойчивый интерес, возможности и желания
+                самого ребенка, умение выполнять отдельные танцевальные
+                элементы. Если ритм привлекает Вашего ребенка, почему бы не
+                попробовать соединить спорт и танец? Ритм взят за основу,
+                движения простые в исполнении, и всегда отражают повседневные
+                образы. Современные танцы без нудного заучивания движений – у
+                нас нет места для скуки!
+              </p>
+              <br />
+              <p>
+                Клубные танцы как спортивное направление с высоким
+                художественным воздействием, очень популярны. Занятия,
+                действительно, эффективны и вполне похожи на фитнес-тренировки.
+                Основные танцевальные направления, включенные в обучение, Вы
+                можете найти в плане расписаний.
+              </p>
+              <br />
+              <p>
+                <b>Профессиональные занятия танцами</b> могут стать уверенным
+                подходом к пониманию Вашего ребенка. Здесь очень важен
+                персональный подход к ребенку, и вовсе не вес, рост и
+                комплекция. Наша задача – научить свободе движений, что
+                становится возможным благодаря отточенному мастерству
+                тренерского состава. Современный подход и профессиональный
+                взгляд опытного тренера – несомненно, дают положительный
+                результат. Обучение танцу в спортклубе Солнцево будет плановым и
+                регулярным. Занятия воспринимаются детьми с неподдельным
+                интересом.
+              </p>
+              <br />
+              <p>
+                <b>Танцы для мальчиков – дилемма для многих родителей.</b> На
+                самом деле, сомнения здесь ничем не обоснованы. В танце
+                происходит естественное природное раскрытие, возрождается
+                гармония. В танцевальном ритме удобней и легче оценить
+                возможности и способности человека. И при абсолютно неважно,
+                мальчик это или девочка.
+              </p>
+              <br />
+              <p><b>Плюсы регулярных занятий танцами:</b></p>
+              <ul>
+                <li>Высокая пластика и четкая организация движений.</li>
+                <li>Подвижность тела и хорошая реакция.</li>
+                <li>Обретение уверенности в себе и своих возможностях.</li>
+                <li>
+                  Поддержание интереса к танцу, спортивным занятиям и регулярным
+                  тренировкам.
+                </li>
+              </ul>
+              <p>
+                Занятия танцами проводятся без ограничений по возрасту для детей
+                и взрослых. Это зрелищные элементы спорта и танца для души!
+              </p>
+              <br />
+              <p>
+                <b
+                  >Где на юге Москвы (ЮЗАО) можно отдать на обучение танцам
+                  ребенка?</b
+                >
+              </p>
+              <p>
+                Обучение эффективно только в профессионально организованном
+                спортивном клубе, где проводятся занятия на постоянной основе
+                коллективом тренерского состава, где все группы формируются с
+                учетом возраста ребенка. E.Club оснащен необходимым современным
+                оборудованием для всех видов спортивных тренировок, обладает
+                великолепным опытным тренерским составом.
+              </p>
+              <br />
+              <p>
+                <b>Занятия танцами в Солнцево</b> – отличная возможность
+                направить и развить интерес к танцу и спорту, выполнить желание
+                Вашего ребенка.
+              </p>
+            </div>
+            <a class="article__box-link" href="./blog.html">Назад к статьям</a>
+          </div>
+          <div class="article__more">
+            <div class="article__popular">
+              <div class="title title-h2">Популярное</div>
+              <div class="blog__list">
+                <div class="blog__box">
+                  <div class="blog__box-img">
+                    <img src="./img/blog-01_2.jpg" alt="" />
+                  </div>
+                  <div class="blog__box-info">
+                    <div class="blog__box-date">25/06/2021</div>
+                    <div class="blog__box-caption">
+                      Ни минуты не теряя, мы здоровье укрепляем
+                    </div>
+                  </div>
+                  <a class="blog__box-link" href="./article.html"></a>
+                </div>
+                <div class="blog__box">
+                  <div class="blog__box-img">
+                    <img src="./img/blog-02.jpg" alt="" />
+                  </div>
+                  <div class="blog__box-info">
+                    <div class="blog__box-date">06/05/2019</div>
+                    <div class="blog__box-caption">
+                      Подходящее время для тренировок
+                    </div>
+                  </div>
+                  <a class="blog__box-link" href="./article.html"></a>
+                </div>
+                <div class="blog__box">
+                  <div class="blog__box-img">
+                    <img src="./img/blog-03.jpg" alt="" />
+                  </div>
+                  <div class="blog__box-info">
+                    <div class="blog__box-date">06/05/2019</div>
+                    <div class="blog__box-caption">
+                      Причины записаться на единоборства
+                    </div>
+                  </div>
+                  <a class="blog__box-link" href="./article.html"></a>
+                </div>
+                <div class="blog__box">
+                  <div class="blog__box-img">
+                    <img src="./img/blog-04.jpg" alt="" />
+                  </div>
+                  <div class="blog__box-info">
+                    <div class="blog__box-date">06/05/2019</div>
+                    <div class="blog__box-caption">Персональный тренинг</div>
+                  </div>
+                  <a class="blog__box-link" href="./article.html"></a>
+                </div>
+                <div class="blog__box">
+                  <div class="blog__box-img">
+                    <img src="./img/blog-05.jpg" alt="" />
+                  </div>
+                  <div class="blog__box-info">
+                    <div class="blog__box-date">06/05/2019</div>
+                    <div class="blog__box-caption">
+                      Занятия хип-хопом для детей
+                    </div>
+                  </div>
+                  <a class="blog__box-link" href="./article.html"></a>
+                </div>
+                <div class="blog__box">
+                  <div class="blog__box-img">
+                    <img src="./img/blog-07.jpg" alt="" />
+                  </div>
+                  <div class="blog__box-info">
+                    <div class="blog__box-date">25/04/2019</div>
+                    <div class="blog__box-caption">Хип-хоп для всех</div>
+                  </div>
+                  <a class="blog__box-link" href="./article.html"></a>
+                </div>
+              </div>
+            </div>
+            <div class="subscribe">
+              <div class="title title-h2">Подписывайтесь</div>
+              <form class="subscribe__form">
+                <div class="subscribe__form-caption">
+                  Получайте информацию об акциях и полезных статьях первыми
+                </div>
+
+                <div class="input-box">
+                  <input
+                    class="input"
+                    type="email"
+                    autocomplete="off"
+                    required
+                  />
+                  <div>
+                    <label class="input-label">E-mail</label>
+                    <div class="input-icon">
+                      <svg
+                        width="512"
+                        height="512"
+                        x="0"
+                        y="0"
+                        viewBox="0 0 512 512"
+                        style="enable-background: new 0 0 512 512"
+                        xml:space="preserve"
+                        class=""
+                      >
+                        <g>
+                          <path
+                            d="m331.756 277.251-42.881 43.026c-17.389 17.45-47.985 17.826-65.75 0l-42.883-43.026L26.226 431.767C31.959 434.418 38.28 436 45 436h422c6.72 0 13.039-1.58 18.77-4.232L331.756 277.251z"
+                            data-original="#000000"
+                            class=""
+                          ></path>
+                          <path
+                            d="M467 76H45c-6.72 0-13.041 1.582-18.772 4.233l164.577 165.123c.011.011.024.013.035.024a.05.05 0 0 1 .013.026l53.513 53.69c5.684 5.684 17.586 5.684 23.27 0l53.502-53.681s.013-.024.024-.035c0 0 .024-.013.035-.024L485.77 80.232C480.039 77.58 473.72 76 467 76zM4.786 101.212C1.82 107.21 0 113.868 0 121v270c0 7.132 1.818 13.79 4.785 19.788l154.283-154.783L4.786 101.212zM507.214 101.21 352.933 256.005 507.214 410.79C510.18 404.792 512 398.134 512 391V121c0-7.134-1.82-13.792-4.786-19.79z"
+                            data-original="#000000"
+                            class=""
+                          ></path>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn btn-small btn-gold" type="submit">
+                  Подписаться на рассылку
+                </button>
+
+                <div class="input-box">
+                  <label class="checkbox">
+                    <input
+                      class="checkbox-input"
+                      type="checkbox"
+                      name="+"
+                      required
+                    />
+                    <div class="checkbox-text">
+                      Я согласен с политикой конфиденциальности и даю согласие
+                      на обработку персональных данных
+                    </div>
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <a class="footer__logo" href="./">
+          <img src="./img/logo.png" alt="" />
+        </a>
+        <div class="footer__info">
+          <div class="footer__address">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              version="1.1"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              xmlns:svgjs="http://svgjs.com/svgjs"
+              width="512"
+              height="512"
+              x="0"
+              y="0"
+              viewBox="0 0 32 32"
+              style="enable-background: new 0 0 512 512"
+              xml:space="preserve"
+              class=""
+            >
+              <g>
+                <path
+                  d="M16 1A11 11 0 0 0 5 12c0 5.81 9.8 18.1 10.22 18.63a1 1 0 0 0 1.56 0C17.2 30.1 27 17.81 27 12A11 11 0 0 0 16 1zm0 14a4 4 0 1 1 4-4 4 4 0 0 1-4 4z"
+                  data-original="#000000"
+                  class=""
+                ></path>
+              </g>
+            </svg>
+            <span>Москва, ТЦ «Солнцево-Парк», ул. Лётчика Ульянина, д. 5</span>
+          </div>
+          <div class="footer__time">Время работы клуба: 06:00 - 00:00</div>
+        </div>
+        <a class="footer__email" href="mailto:info@e-club.fit"
+          >info@e-club.fit</a
+        >
+        <a class="btn btn-small btn-transparent js-popup" href="#call"
+          >Позвоните мне</a
+        >
+        <a class="footer__phone" href="tel:+74951504557">+7 (495) 150-45-57</a>
+      </div>
+    </footer>
+
+    <div id="call" class="popup">
+      <div class="popup__wrapper">
+        <div class="popup__close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:svgjs="http://svgjs.com/svgjs"
+            width="512"
+            height="512"
+            x="0"
+            y="0"
+            viewBox="0 0 492 492"
+            style="enable-background: new 0 0 512 512"
+            xml:space="preserve"
+            class=""
+          >
+            <g>
+              <path
+                d="M300.188 246 484.14 62.04c5.06-5.064 7.852-11.82 7.86-19.024 0-7.208-2.792-13.972-7.86-19.028L468.02 7.872C462.952 2.796 456.196.016 448.984.016c-7.2 0-13.956 2.78-19.024 7.856L246.008 191.82 62.048 7.872C56.988 2.796 50.228.016 43.02.016c-7.2 0-13.96 2.78-19.02 7.856L7.872 23.988c-10.496 10.496-10.496 27.568 0 38.052L191.828 246 7.872 429.952C2.808 435.024.02 441.78.02 448.984c0 7.204 2.788 13.96 7.852 19.028l16.124 16.116c5.06 5.072 11.824 7.856 19.02 7.856 7.208 0 13.968-2.784 19.028-7.856l183.96-183.952 183.952 183.952c5.068 5.072 11.824 7.856 19.024 7.856h.008c7.204 0 13.96-2.784 19.028-7.856l16.12-16.116c5.06-5.064 7.852-11.824 7.852-19.028 0-7.204-2.792-13.96-7.852-19.028L300.188 246z"
+                data-original="#000000"
+                class=""
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="popup__content">
+          <form class="popup__form">
+            <div class="title title-h2"><span>Обратный </span>звонок</div>
+
+            <div class="input-box">
+              <input class="input" type="text" autocomplete="off" required />
+              <div>
+                <label class="input-label">Имя</label>
+                <div class="input-icon">
+                  <svg
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 512 512"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <path
+                        d="M256 0c-74.439 0-135 60.561-135 135s60.561 135 135 135 135-60.561 135-135S330.439 0 256 0zM423.966 358.195C387.006 320.667 338.009 300 286 300h-60c-52.008 0-101.006 20.667-137.966 58.195C51.255 395.539 31 444.833 31 497c0 8.284 6.716 15 15 15h420c8.284 0 15-6.716 15-15 0-52.167-20.255-101.461-57.034-138.805z"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-box">
+              <input class="input" type="text" autocomplete="off" required />
+              <div>
+                <label class="input-label">Телефон</label>
+                <div class="input-icon">
+                  <svg
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 32 32"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <path
+                        d="M30.035 22.6c-.082-.065-6.035-4.356-7.669-4.048-.78.138-1.226.67-2.121 1.735-.144.172-.49.584-.759.877a12.517 12.517 0 0 1-1.651-.672 13.7 13.7 0 0 1-6.321-6.321 12.458 12.458 0 0 1-.672-1.651c.294-.27.706-.616.882-.764 1.06-.89 1.593-1.336 1.731-2.118.283-1.62-4.005-7.614-4.05-7.668A2.289 2.289 0 0 0 7.7 1C5.962 1 1 7.437 1 8.521c0 .063.091 6.467 7.988 14.5C17.013 30.909 23.416 31 23.479 31 24.564 31 31 26.038 31 24.3a2.283 2.283 0 0 0-.965-1.7z"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-big btn-gold" type="submit">
+              Отправить
+            </button>
+
+            <div class="input-box">
+              <label class="checkbox">
+                <input
+                  class="checkbox-input"
+                  type="checkbox"
+                  name="+"
+                  required
+                />
+                <div class="checkbox-text">
+                  Я согласен с политикой конфиденциальности и даю согласие на
+                  обработку персональных данных
+                </div>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="request" class="popup">
+      <div class="popup__wrapper">
+        <div class="popup__close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:svgjs="http://svgjs.com/svgjs"
+            width="512"
+            height="512"
+            x="0"
+            y="0"
+            viewBox="0 0 492 492"
+            style="enable-background: new 0 0 512 512"
+            xml:space="preserve"
+            class=""
+          >
+            <g>
+              <path
+                d="M300.188 246 484.14 62.04c5.06-5.064 7.852-11.82 7.86-19.024 0-7.208-2.792-13.972-7.86-19.028L468.02 7.872C462.952 2.796 456.196.016 448.984.016c-7.2 0-13.956 2.78-19.024 7.856L246.008 191.82 62.048 7.872C56.988 2.796 50.228.016 43.02.016c-7.2 0-13.96 2.78-19.02 7.856L7.872 23.988c-10.496 10.496-10.496 27.568 0 38.052L191.828 246 7.872 429.952C2.808 435.024.02 441.78.02 448.984c0 7.204 2.788 13.96 7.852 19.028l16.124 16.116c5.06 5.072 11.824 7.856 19.02 7.856 7.208 0 13.968-2.784 19.028-7.856l183.96-183.952 183.952 183.952c5.068 5.072 11.824 7.856 19.024 7.856h.008c7.204 0 13.96-2.784 19.028-7.856l16.12-16.116c5.06-5.064 7.852-11.824 7.852-19.028 0-7.204-2.792-13.96-7.852-19.028L300.188 246z"
+                data-original="#000000"
+                class=""
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="popup__content">
+          <form class="popup__form">
+            <div class="title title-h2"><span>Оставить </span>заявку</div>
+
+            <div class="input-box">
+              <input class="input" type="text" autocomplete="off" required />
+              <div>
+                <label class="input-label">Имя</label>
+                <div class="input-icon">
+                  <svg
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 512 512"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <path
+                        d="M256 0c-74.439 0-135 60.561-135 135s60.561 135 135 135 135-60.561 135-135S330.439 0 256 0zM423.966 358.195C387.006 320.667 338.009 300 286 300h-60c-52.008 0-101.006 20.667-137.966 58.195C51.255 395.539 31 444.833 31 497c0 8.284 6.716 15 15 15h420c8.284 0 15-6.716 15-15 0-52.167-20.255-101.461-57.034-138.805z"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-box">
+              <input class="input" type="text" autocomplete="off" required />
+              <div>
+                <label class="input-label">Телефон</label>
+                <div class="input-icon">
+                  <svg
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 32 32"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <path
+                        d="M30.035 22.6c-.082-.065-6.035-4.356-7.669-4.048-.78.138-1.226.67-2.121 1.735-.144.172-.49.584-.759.877a12.517 12.517 0 0 1-1.651-.672 13.7 13.7 0 0 1-6.321-6.321 12.458 12.458 0 0 1-.672-1.651c.294-.27.706-.616.882-.764 1.06-.89 1.593-1.336 1.731-2.118.283-1.62-4.005-7.614-4.05-7.668A2.289 2.289 0 0 0 7.7 1C5.962 1 1 7.437 1 8.521c0 .063.091 6.467 7.988 14.5C17.013 30.909 23.416 31 23.479 31 24.564 31 31 26.038 31 24.3a2.283 2.283 0 0 0-.965-1.7z"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-box">
+              <input class="input" type="email" autocomplete="off" required />
+              <div>
+                <label class="input-label">E-mail</label>
+                <div class="input-icon">
+                  <svg
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 512 512"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <path
+                        d="m331.756 277.251-42.881 43.026c-17.389 17.45-47.985 17.826-65.75 0l-42.883-43.026L26.226 431.767C31.959 434.418 38.28 436 45 436h422c6.72 0 13.039-1.58 18.77-4.232L331.756 277.251z"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                      <path
+                        d="M467 76H45c-6.72 0-13.041 1.582-18.772 4.233l164.577 165.123c.011.011.024.013.035.024a.05.05 0 0 1 .013.026l53.513 53.69c5.684 5.684 17.586 5.684 23.27 0l53.502-53.681s.013-.024.024-.035c0 0 .024-.013.035-.024L485.77 80.232C480.039 77.58 473.72 76 467 76zM4.786 101.212C1.82 107.21 0 113.868 0 121v270c0 7.132 1.818 13.79 4.785 19.788l154.283-154.783L4.786 101.212zM507.214 101.21 352.933 256.005 507.214 410.79C510.18 404.792 512 398.134 512 391V121c0-7.134-1.82-13.792-4.786-19.79z"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-big btn-gold" type="submit">
+              Отправить
+            </button>
+
+            <div class="input-box">
+              <label class="checkbox">
+                <input
+                  class="checkbox-input"
+                  type="checkbox"
+                  name="+"
+                  required
+                />
+                <div class="checkbox-text">
+                  Я согласен с политикой конфиденциальности и даю согласие на
+                  обработку персональных данных
+                </div>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div id="training" class="popup">
+      <div class="popup__wrapper">
+        <div class="popup__close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            xmlns:svgjs="http://svgjs.com/svgjs"
+            width="512"
+            height="512"
+            x="0"
+            y="0"
+            viewBox="0 0 492 492"
+            style="enable-background: new 0 0 512 512"
+            xml:space="preserve"
+            class=""
+          >
+            <g>
+              <path
+                d="M300.188 246 484.14 62.04c5.06-5.064 7.852-11.82 7.86-19.024 0-7.208-2.792-13.972-7.86-19.028L468.02 7.872C462.952 2.796 456.196.016 448.984.016c-7.2 0-13.956 2.78-19.024 7.856L246.008 191.82 62.048 7.872C56.988 2.796 50.228.016 43.02.016c-7.2 0-13.96 2.78-19.02 7.856L7.872 23.988c-10.496 10.496-10.496 27.568 0 38.052L191.828 246 7.872 429.952C2.808 435.024.02 441.78.02 448.984c0 7.204 2.788 13.96 7.852 19.028l16.124 16.116c5.06 5.072 11.824 7.856 19.02 7.856 7.208 0 13.968-2.784 19.028-7.856l183.96-183.952 183.952 183.952c5.068 5.072 11.824 7.856 19.024 7.856h.008c7.204 0 13.96-2.784 19.028-7.856l16.12-16.116c5.06-5.064 7.852-11.824 7.852-19.028 0-7.204-2.792-13.96-7.852-19.028L300.188 246z"
+                data-original="#000000"
+                class=""
+              ></path>
+            </g>
+          </svg>
+        </div>
+        <div class="popup__content">
+          <form class="popup__form">
+            <div class="title title-h2">
+              <span>Записаться </span>на тренировку
+            </div>
+
+            <div class="input-box">
+              <input class="input" type="text" autocomplete="off" required />
+              <div>
+                <label class="input-label">Имя</label>
+                <div class="input-icon">
+                  <svg
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 512 512"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <path
+                        d="M256 0c-74.439 0-135 60.561-135 135s60.561 135 135 135 135-60.561 135-135S330.439 0 256 0zM423.966 358.195C387.006 320.667 338.009 300 286 300h-60c-52.008 0-101.006 20.667-137.966 58.195C51.255 395.539 31 444.833 31 497c0 8.284 6.716 15 15 15h420c8.284 0 15-6.716 15-15 0-52.167-20.255-101.461-57.034-138.805z"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-box">
+              <input class="input" type="text" autocomplete="off" required />
+              <div>
+                <label class="input-label">Телефон</label>
+                <div class="input-icon">
+                  <svg
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 32 32"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <path
+                        d="M30.035 22.6c-.082-.065-6.035-4.356-7.669-4.048-.78.138-1.226.67-2.121 1.735-.144.172-.49.584-.759.877a12.517 12.517 0 0 1-1.651-.672 13.7 13.7 0 0 1-6.321-6.321 12.458 12.458 0 0 1-.672-1.651c.294-.27.706-.616.882-.764 1.06-.89 1.593-1.336 1.731-2.118.283-1.62-4.005-7.614-4.05-7.668A2.289 2.289 0 0 0 7.7 1C5.962 1 1 7.437 1 8.521c0 .063.091 6.467 7.988 14.5C17.013 30.909 23.416 31 23.479 31 24.564 31 31 26.038 31 24.3a2.283 2.283 0 0 0-.965-1.7z"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-box">
+              <input class="input" type="email" autocomplete="off" required />
+              <div>
+                <label class="input-label">E-mail</label>
+                <div class="input-icon">
+                  <svg
+                    width="512"
+                    height="512"
+                    x="0"
+                    y="0"
+                    viewBox="0 0 512 512"
+                    style="enable-background: new 0 0 512 512"
+                    xml:space="preserve"
+                    class=""
+                  >
+                    <g>
+                      <path
+                        d="m331.756 277.251-42.881 43.026c-17.389 17.45-47.985 17.826-65.75 0l-42.883-43.026L26.226 431.767C31.959 434.418 38.28 436 45 436h422c6.72 0 13.039-1.58 18.77-4.232L331.756 277.251z"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                      <path
+                        d="M467 76H45c-6.72 0-13.041 1.582-18.772 4.233l164.577 165.123c.011.011.024.013.035.024a.05.05 0 0 1 .013.026l53.513 53.69c5.684 5.684 17.586 5.684 23.27 0l53.502-53.681s.013-.024.024-.035c0 0 .024-.013.035-.024L485.77 80.232C480.039 77.58 473.72 76 467 76zM4.786 101.212C1.82 107.21 0 113.868 0 121v270c0 7.132 1.818 13.79 4.785 19.788l154.283-154.783L4.786 101.212zM507.214 101.21 352.933 256.005 507.214 410.79C510.18 404.792 512 398.134 512 391V121c0-7.134-1.82-13.792-4.786-19.79z"
+                        data-original="#000000"
+                        class=""
+                      ></path>
+                    </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <button class="btn btn-big btn-gold" type="submit">
+              Отправить
+            </button>
+
+            <div class="input-box">
+              <label class="checkbox">
+                <input
+                  class="checkbox-input"
+                  type="checkbox"
+                  name="+"
+                  required
+                />
+                <div class="checkbox-text">
+                  Я согласен с политикой конфиденциальности и даю согласие на
+                  обработку персональных данных
+                </div>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIM5OXdk6G5j-NY3hOSK1HLARuvCqpCIA&callback=initMap"
+      async
+      defer
+    ></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>

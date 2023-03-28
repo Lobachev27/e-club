@@ -1,0 +1,680 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.article {
+  position: relative;
+  margin: 60px 0;
+  @media screen and ($tablet1) {
+    margin: 80px 0;
+  }
+  @media screen and ($desktop1) {
+    margin: 100px 0;
+  }
+
+  & .container {
+    @media screen and ($desktop1) {
+      display: grid;
+      grid-template-columns: auto 400px;
+      grid-gap: 20px;
+    }
+    @media screen and ($desktop2) {
+      grid-template-columns: auto 420px;
+      grid-gap: 32px;
+    }
+  }
+
+  & .row {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__box {
+    position: relative;
+    background-color: $text-color-main;
+    border-radius: 8px;
+    padding: 20px 15px;
+    @media screen and ($tablet1) {
+      padding: 30px 20px;
+    }
+    @media screen and ($tablet2) {
+      padding: 40px 30px;
+    }
+
+    & .title.title-h1 {
+      color: $bg-main;
+      text-transform: initial;
+      margin: 10px 0;
+      @media screen and ($tablet1) {
+        margin: 15px 0;
+      }
+    }
+
+    &-date {
+      font-size: 14px;
+      color: $bg-main;
+      margin-right: 20px;
+    }
+
+    &-marker {
+      font-size: 12px;
+      line-height: 1.2em;
+      background-color: $bg-block-hover;
+      color: $text-color-main;
+      white-space: nowrap;
+      border-radius: 4px;
+      padding: 8px 12px;
+      @media screen and ($tablet1) {
+        font-size: 14px;
+        padding: 8px 15px;
+      }
+
+      &.marker-article {
+        background-color: $main-color;
+      }
+
+      &.marker-news {
+        background-color: #494992;
+      }
+
+      &.marker-stock {
+        background-color: #bd0e37;
+      }
+    }
+
+    &-img {
+      position: relative;
+      width: 100%;
+      padding-top: 55%;
+      overflow: hidden;
+
+      & img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        object-fit: cover;
+        transition: transform 0.7s;
+      }
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 1.5em;
+      color: $bg-main;
+      margin-top: 20px;
+      @media screen and ($tablet1) {
+        font-size: 16px;
+        margin-top: 30px;
+      }
+
+      & ul {
+        list-style: none;
+      }
+
+      & p,
+      & li {
+        font-size: inherit;
+        color: inherit;
+      }
+
+      & li {
+        position: relative;
+        padding-left: 12px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 8px;
+          left: 0;
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background-color: $bg-main;
+        }
+      }
+    }
+
+    &-link {
+      position: relative;
+      display: block;
+      font-weight: 700;
+      color: $bg-main;
+      width: max-content;
+      padding-left: 38px;
+      margin-top: 30px;
+      transition: color 0.3s;
+      @media screen and ($tablet1) {
+        font-size: 16px;
+        padding-left: 44px;
+        margin-top: 50px;
+      }
+
+      &:hover {
+        color: $main-color-hover;
+
+        &:before {
+          background-color: $main-color-hover;
+        }
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 28px;
+        height: 28px;
+        background-color: $bg-main;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+        @media screen and ($tablet1) {
+          width: 32px;
+          height: 32px;
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%) rotate(180deg);
+        background: url("../img/icon-arrow.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 8px;
+        height: 14px;
+        @media screen and ($tablet1) {
+          left: 12px;
+        }
+      }
+    }
+  }
+
+  &__more {
+    & .title.title-h2 {
+      position: relative;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: initial;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: calc(100% - 200px);
+        height: 1px;
+        background-color: $main-color;
+      }
+    }
+  }
+
+  &__popular {
+    position: relative;
+    margin-top: 40px;
+    @media screen and ($tablet1) {
+      margin-top: 50px;
+    }
+    @media screen and ($desktop1) {
+      margin-top: 0;
+    }
+
+    & .blog {
+      &__list {
+        @media screen and ($desktop1) {
+          grid-template-columns: 1fr;
+          grid-gap: 12px;
+          margin: 20px 0;
+        }
+      }
+
+      &__box {
+        display: grid;
+        grid-template-columns: 110px auto;
+        border-radius: 4px;
+        @media screen and ($desktop1) {
+          grid-template-columns: 120px auto;
+        }
+
+        &:hover {
+          & .blog {
+            &__box {
+              &-info {
+                border: none;
+              }
+            }
+          }
+        }
+
+        &-img {
+          padding-top: 100%;
+        }
+
+        &-info {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          border: none;
+          padding: 15px;
+          min-height: 110px;
+          @media screen and ($desktop1) {
+            min-height: 120px;
+          }
+        }
+
+        &-date {
+          font-size: 12px;
+        }
+
+        &-caption {
+          font-size: 14px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+/*
+@import "partials/params";
+@import "partials/mixins";
+
+.article {
+  width: 100%;
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media screen and ($tablet2) {
+      flex-direction: column;
+    }
+  }
+  &_left {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(72% - 15px);
+    background-color: white;
+    @media screen and ($desktop1) {
+      flex-basis: calc(65% - 10px);
+    }
+    @media screen and ($tablet2) {
+      flex-basis: 100%;
+    }
+  }
+  &_right {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(28% - 15px);
+    @media screen and ($desktop1) {
+      flex-basis: calc(35% - 10px);
+    }
+    @media screen and ($tablet2) {
+      flex-basis: 100%;
+    }
+  }
+  &_top {
+    display: flex;
+    flex-direction: column;
+    @media screen and ($tablet2) {
+      margin-top: 70px;
+    }
+    @media screen and ($mobile5) {
+      margin-top: 50px;
+    }
+  }
+  &_bottom {
+    display: flex;
+    flex-direction: column;
+    @media screen and ($tablet2) {
+      margin-top: 40px;
+    }
+    @media screen and ($mobile5) {
+      margin-top: 20px;
+    }
+  }
+  &_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    width: 100%;
+    padding: 60px 40px 75px;
+    min-height: 100%;
+    @media screen and ($mobile5) {
+      padding: 35px;
+    }
+    @media screen and ($mobile3) {
+      padding: 25px;
+    }
+  }
+  &_up {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  &_marker {
+    color: $text-color-main;
+    font-size: $text-size-xxs;
+    padding: 8px 20px;
+    &.articles {
+      background-color: #a77e42;
+    }
+    &.news {
+      background-color: #494992;
+    }
+    &.stock {
+      background-color: #bd0e37;
+    }
+  }
+  &_title {
+    color: black;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.3;
+    margin-top: 20px;
+    @media screen and ($desktop1) {
+      font-size: 24px;
+    }
+    @media screen and ($mobile5) {
+      font-size: 20px;
+    }
+    @media screen and ($mobile2) {
+      font-size: 18px;
+    }
+  }
+  &_img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 377px;
+    margin: 40px 0 30px;
+    @media screen and ($desktop1) {
+      height: 240px;
+    }
+    @media screen and ($tablet2) {
+      height: 314px;
+    }
+    @media screen and ($tablet1) {
+      height: 225px;
+    }
+    @media screen and ($mobile5) {
+      height: 163px;
+      margin: 20px 0 20px;
+    }
+    @media screen and ($mobile3) {
+      height: 30vw;
+    }
+  }
+  &_description {
+    color: black;
+    font-size: $text-size-s;
+    line-height: 1.7em;
+    margin-bottom: 30px;
+    @media screen and ($desktop1) {
+      font-size: 15px;
+      line-height: 1.5em;
+    }
+    @media screen and ($tablet1) {
+      font-size: 14px;
+      line-height: 1.5em;
+    }
+    @media screen and ($mobile5) {
+      font-size: 13px;
+    }
+  }
+  &_subtitle {
+    color: black;
+    font-weight: 700;
+    font-size: $text-size-xl;
+    margin-bottom: 20px;
+    @media screen and ($desktop1) {
+      font-size: $text-size-l;
+    }
+    @media screen and ($mobile5) {
+      font-size: $text-size-s;
+    }
+    @media screen and ($mobile2) {
+      font-size: 15px;
+    }
+  }
+  &_exit {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    &_icon {
+      background: url("../img/angle-arrow-right-white.png") no-repeat 0px;
+      background-position: center;
+      background-color: #222224;
+      transform: rotate(180deg);
+      width: 8px;
+      height: 12px;
+      padding: 18px;
+      margin-right: 20px;
+      @media screen and ($desktop1) {
+        padding: 15px;
+      }
+    }
+    &_text {
+      color: black;
+      font-weight: 700;
+      font-size: $text-size-xs;
+    }
+    &:hover &_icon {
+      cursor: pointer;
+      background-color: $main-color;
+    }
+    &:hover &_text {
+      cursor: pointer;
+      color: $main-color;
+    }
+  }
+  &_caption {
+    position: relative;
+    font-weight: 700;
+    font-size: $text-size-l;
+    margin-bottom: 20px;
+    @media screen and ($tablet2) {
+      font-size: $text-size-l;
+      margin-bottom: 20px;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      width: 220px;
+      height: 1px;
+      background-color: $main-color;
+      right: 0;
+      top: 15px;
+      @media screen and ($desktop1) {
+        width: 190px;
+      }
+      @media screen and ($tablet2) {
+        width: 730px;
+        top: 15px;
+      }
+      @media screen and ($tablet1) {
+        width: 480px;
+      }
+      @media screen and ($mobile5) {
+        width: 300px;
+      }
+      @media screen and ($mobile3) {
+        width: calc(100% - 200px);
+      }
+    }
+  }
+  &_popular {
+    &_wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      @media screen and ($tablet2) {
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: calc(100% + 20px);
+        margin-top: 10px;
+        margin-bottom: 20px;
+        margin-right: -20px;
+      }
+      @media screen and ($mobile5) {
+        width: 100%;
+        margin-right: 0;
+      }
+    }
+    &_link{
+      text-decoration: none;
+      display: flex;
+      flex-direction: row;
+    }
+    &_img {
+      min-width: 161px;
+      width: 161px;
+      height: 150px;
+      @media screen and ($desktop1) {
+        width: 130px;
+        height: 120px;
+        min-width: 130px;
+      }
+      @media screen and ($tablet2) {
+        min-width: 143px;
+        width: 143px;
+        height: 130px;
+      }
+      @media screen and ($tablet1) {
+        min-width: 127px;
+        width: 127px;
+        height: 118px;
+      }
+      @media screen and ($mobile5) {
+        min-width: 120px;
+        width: 120px;
+        height: 112px;
+      }
+      @media screen and ($mobile2) {
+        min-width: 110px;
+        width: 110px;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &_info {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 30px 20px 20px;
+      @media screen and ($desktop1) {
+        padding: 15px;
+      }
+    }
+    &_date {
+      color: $text-color-main-two;
+      font-size: $text-size-xxs;
+      @media screen and ($tablet2) {
+        font-size: $text-size-xxs;
+      }
+    }
+    &_text {
+      font-size: $text-size-xs;
+      margin-top: 5px;
+      @media screen and ($tablet2) {
+        font-size: $text-size-xs;
+        margin-top: 5px;
+      }
+      @media screen and ($tablet1) {
+        font-size: $text-size-xxs;
+      }
+      @media screen and ($mobile5) {
+        font-size: $text-size-xs;
+        margin-top: 5px;
+      }
+      @media screen and ($mobile2) {
+        font-size: 13px;
+      }
+    }
+  }
+  &_block {
+    display: flex;
+    flex-direction: row;
+    background-color: $bg-block;
+    margin-bottom: 15px;
+    @media screen and ($tablet2) {
+      flex-basis: calc(50% - 20px);
+      margin-bottom: 20px;
+      margin-right: 20px;
+    }
+    @media screen and ($mobile5) {
+      flex-basis: 100%;
+      margin-right: 0;
+    }
+    &:hover {
+      background-color: $bg-block-hover;
+      cursor: pointer;
+    }
+  }
+  &_form {
+    background: url("../img/paper-plane-2.jpg") no-repeat 0px;
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: cover;
+    padding: 30px;
+    @media screen and ($mobile2) {
+      padding: 30px 20px;
+    }
+    &_text {
+      text-align: center;
+      & span {
+        font-weight: 700;
+      }
+    }
+    & .label {
+      color: $text-color-main-two;
+      position: absolute;
+      bottom: calc(50% + 7px);
+      left: 0;
+      pointer-events: none;
+      transition-duration: 0.2s;
+    }
+    & .mail-icon {
+      position: absolute;
+      background: url("../img/icon_mail.png") no-repeat 0px;
+      background-position: center;
+      background-size: cover;
+      width: 17px;
+      height: 13px;
+      right: 0;
+      top: 6px;
+    }
+  }
+  &_input {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: -10px;
+  }
+  &_request {
+    outline: none;
+    border: none;
+    width: 100%;
+    @media screen and ($tablet2) {
+      width: 300px;
+      margin: 0 auto !important;
+    }
+    @media screen and ($mobile3) {
+      width: 290px;
+    }
+    @media screen and ($mobile2) {
+      width: 250px;
+    }
+  }
+}
+*/

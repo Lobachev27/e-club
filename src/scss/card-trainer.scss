@@ -1,0 +1,690 @@
+/*
+@import "partials/params";
+@import "partials/mixins";
+
+.card-trainer{
+  position: relative;
+  width: 100%;
+  height: 720px;
+  overflow: hidden;
+  &_wrapper{
+    width: 390px;
+    margin-left: 115px;
+  }
+  &_description{
+    font-size: $text-size-xs;
+    margin: 20px 0 60px;
+  }
+  &_gradient{
+    position: absolute;
+    background: radial-gradient(circle closest-corner at 70% 60%, #3f3f44, #2c2c2f, $bg-main);
+    width: 100%;
+    height: 720px;
+    top: 0;
+  }
+  &_photo{
+    position: absolute;
+    background: url("../img/Katushenko-2.png") no-repeat 0px;
+    background-position: top;
+    background-size: cover;
+    width: 650px;
+    height: 630px;
+    bottom: 0;
+    left: 47.5%;
+  }
+  &_circle{
+    position: relative;
+    width: 580px;
+    height: 580px;
+    bottom: 0;
+    left: 50%;
+    &_one{
+      position: absolute;
+      width: 580px;
+      height: 580px;
+      border: 1px solid #414144;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &_two{
+      position: absolute;
+      width: 480px;
+      height: 480px;
+      border: 1px solid #414144;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &_ellipse{
+    position: absolute;
+    background: url("../img/icon-ellipse-2.png") no-repeat 0px;
+    background-position: center;
+    background-color: $bg-main;
+    border: 1px solid #414144;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    top: 283px;
+    left: 283px;
+    &.one{
+      transform: rotate(30deg) translateX(-290px);
+      -webkit-animation: orbit3 10s linear infinite;
+      -moz-animation: orbit3 10s linear infinite;
+      -o-animation: orbit3 10s linear infinite;
+      animation: orbit3 10s linear infinite;
+      @-webkit-keyframes orbit3 {
+        from {
+          -webkit-transform: rotate(30deg) translateX(-290px) rotate(0deg);
+        }
+        to {
+          -webkit-transform: rotate(390deg) translateX(-290px) rotate(-360deg);
+        }
+      }
+      @-moz-keyframes orbit3 {
+        from {
+          -moz-transform: rotate(30deg) translateX(-290px) rotate(0deg);
+        }
+        to {
+          -moz-transform: rotate(390deg) translateX(-290px) rotate(-360deg);
+        }
+      }
+      @-o-keyframes orbit3 {
+        from {
+          -o-transform: rotate(30deg) translateX(-290px) rotate(0deg);
+        }
+        to {
+          -o-transform: rotate(390deg) translateX(-290px) rotate(-360deg);
+        }
+      }
+      @keyframes orbit3 {
+        from {
+          transform: rotate(30deg) translateX(-290px) rotate(0deg);
+        }
+        to {
+          transform: rotate(390deg) translateX(-290px) rotate(-360deg);
+        }
+      }
+    }
+    &.two{
+      transform: rotate(-20deg) translateX(-240px);
+      -webkit-animation: orbit4 8s linear infinite;
+      -moz-animation: orbit4 8s linear infinite;
+      -o-animation: orbit4 8s linear infinite;
+      animation: orbit4 8s linear infinite;
+      @-webkit-keyframes orbit4 {
+        from {
+          -webkit-transform: rotate(-20deg) translateX(-240px) rotate(0deg);
+        }
+        to {
+          -webkit-transform: rotate(340deg) translateX(-240px) rotate(-360deg);
+        }
+      }
+      @-moz-keyframes orbit4 {
+        from {
+          -moz-transform: rotate(-20deg) translateX(-240px) rotate(0deg);
+        }
+        to {
+          -moz-transform: rotate(340deg) translateX(-240px) rotate(-360deg);
+        }
+      }
+      @-o-keyframes orbit4 {
+        from {
+          -o-transform: rotate(-20deg) translateX(-240px) rotate(0deg);
+        }
+        to {
+          -o-transform: rotate(340deg) translateX(-240px) rotate(-360deg);
+        }
+      }
+      @keyframes orbit4 {
+        from {
+          transform: rotate(-20deg) translateX(-240px) rotate(0deg);
+        }
+        to {
+          transform: rotate(340deg) translateX(-240px) rotate(-360deg);
+        }
+      }
+    }
+    &.three{
+      transform: rotate(-5deg) translateX(240px);
+      -webkit-animation: orbit5 8s linear infinite;
+      -moz-animation: orbit5 8s linear infinite;
+      -o-animation: orbit5 8s linear infinite;
+      animation: orbit5 8s linear infinite;
+      @-webkit-keyframes orbit5 {
+        from {
+          -webkit-transform: rotate(-5deg) translateX(240px) rotate(0deg);
+        }
+        to {
+          -webkit-transform: rotate(355deg) translateX(240px) rotate(-360deg);
+        }
+      }
+      @-moz-keyframes orbit5 {
+        from {
+          -moz-transform: rotate(-5deg) translateX(240px) rotate(0deg);
+        }
+        to {
+          -moz-transform: rotate(355deg) translateX(240px) rotate(-360deg);
+        }
+      }
+      @-o-keyframes orbit5 {
+        from {
+          -o-transform: rotate(-5deg) translateX(240px) rotate(0deg);
+        }
+        to {
+          -o-transform: rotate(355deg) translateX(240px) rotate(-360deg);
+        }
+      }
+      @keyframes orbit5 {
+        from {
+          transform: rotate(-5deg) translateX(240px) rotate(0deg);
+        }
+        to {
+          transform: rotate(355deg) translateX(240px) rotate(-360deg);
+        }
+      }
+    }
+  }
+}
+
+.specialization{
+  margin-top: 80px;
+  &_wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 70px;
+  }
+  &_item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 16.6666%;
+    margin-right: 90px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &_text{
+    font-size: $text-size-xs;
+    text-align: center;
+    margin-top: 20px;
+    & span{
+      font-weight: 700;
+    }
+  }
+}
+
+@media screen and (max-width: 1630px) {
+  .card-trainer{
+    &_wrapper{
+      margin-left: 30px;
+    }
+    &_gradient{
+      background: radial-gradient(circle closest-corner at 65% 60%, #3f3f44, #2c2c2f, $bg-main);
+    }
+    &_photo{
+      left: 45%;
+    }
+    &_circle{
+      bottom: 0;
+      left: 47%;
+    }
+  }
+  .specialization{
+    margin-top: 70px;
+    &_wrapper{
+      margin-top: 60px;
+    }
+    &_item{
+      margin-right: 30px;
+    }
+    &_text{
+      font-size: 13px;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .card-trainer{
+    height: 620px;
+    &_gradient{
+      background: radial-gradient(circle closest-corner at 65% 60%, #3f3f44, #2c2c2f, $bg-main);
+      height: 620px;
+    }
+    &_photo{
+      width: 530px;
+      height: 510px;
+      bottom: 0;
+      left: 47.5%;
+    }
+    &_circle{
+      width: 480px;
+      height: 480px;
+      bottom: 0;
+      left: 50%;
+      &_one{
+        width: 480px;
+        height: 480px;
+      }
+      &_two{
+        width: 380px;
+        height: 380px;
+      }
+    }
+    &_ellipse{
+      top: 233px;
+      left: 233px;
+      &.one{
+        transform: rotate(30deg) translateX(-240px);
+        -webkit-animation: orbit3 10s linear infinite;
+        -moz-animation: orbit3 10s linear infinite;
+        -o-animation: orbit3 10s linear infinite;
+        animation: orbit3 10s linear infinite;
+        @-webkit-keyframes orbit3 {
+          from {
+            -webkit-transform: rotate(30deg) translateX(-240px) rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(390deg) translateX(-240px) rotate(-360deg);
+          }
+        }
+        @-moz-keyframes orbit3 {
+          from {
+            -moz-transform: rotate(30deg) translateX(-240px) rotate(0deg);
+          }
+          to {
+            -moz-transform: rotate(390deg) translateX(-240px) rotate(-360deg);
+          }
+        }
+        @-o-keyframes orbit3 {
+          from {
+            -o-transform: rotate(30deg) translateX(-240px) rotate(0deg);
+          }
+          to {
+            -o-transform: rotate(390deg) translateX(-240px) rotate(-360deg);
+          }
+        }
+        @keyframes orbit3 {
+          from {
+            transform: rotate(30deg) translateX(-240px) rotate(0deg);
+          }
+          to {
+            transform: rotate(390deg) translateX(-240px) rotate(-360deg);
+          }
+        }
+      }
+      &.two{
+        transform: rotate(-20deg) translateX(-190px);
+        -webkit-animation: orbit4 8s linear infinite;
+        -moz-animation: orbit4 8s linear infinite;
+        -o-animation: orbit4 8s linear infinite;
+        animation: orbit4 8s linear infinite;
+        @-webkit-keyframes orbit4 {
+          from {
+            -webkit-transform: rotate(-20deg) translateX(-190px) rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(340deg) translateX(-190px) rotate(-360deg);
+          }
+        }
+        @-moz-keyframes orbit4 {
+          from {
+            -moz-transform: rotate(-20deg) translateX(-190px) rotate(0deg);
+          }
+          to {
+            -moz-transform: rotate(340deg) translateX(-190px) rotate(-360deg);
+          }
+        }
+        @-o-keyframes orbit4 {
+          from {
+            -o-transform: rotate(-20deg) translateX(-190px) rotate(0deg);
+          }
+          to {
+            -o-transform: rotate(340deg) translateX(-190px) rotate(-360deg);
+          }
+        }
+        @keyframes orbit4 {
+          from {
+            transform: rotate(-20deg) translateX(-190px) rotate(0deg);
+          }
+          to {
+            transform: rotate(340deg) translateX(-190px) rotate(-360deg);
+          }
+        }
+      }
+      &.three{
+        transform: rotate(-5deg) translateX(190px);
+        -webkit-animation: orbit5 8s linear infinite;
+        -moz-animation: orbit5 8s linear infinite;
+        -o-animation: orbit5 8s linear infinite;
+        animation: orbit5 8s linear infinite;
+        @-webkit-keyframes orbit5 {
+          from {
+            -webkit-transform: rotate(-5deg) translateX(190px) rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(355deg) translateX(190px) rotate(-360deg);
+          }
+        }
+        @-moz-keyframes orbit5 {
+          from {
+            -moz-transform: rotate(-5deg) translateX(190px) rotate(0deg);
+          }
+          to {
+            -moz-transform: rotate(355deg) translateX(190px) rotate(-360deg);
+          }
+        }
+        @-o-keyframes orbit5 {
+          from {
+            -o-transform: rotate(-5deg) translateX(190px) rotate(0deg);
+          }
+          to {
+            -o-transform: rotate(355deg) translateX(190px) rotate(-360deg);
+          }
+        }
+        @keyframes orbit5 {
+          from {
+            transform: rotate(-5deg) translateX(190px) rotate(0deg);
+          }
+          to {
+            transform: rotate(355deg) translateX(190px) rotate(-360deg);
+          }
+        }
+      }
+    }
+  }
+  .specialization{
+    margin-top: 70px;
+    &_wrapper{
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+    &_item{
+      flex-basis: calc(33.3333% - 50px);
+      margin-right: 0;
+      margin-top: 30px;
+    }
+    &_text{
+      font-size: 13px;
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .card-trainer{
+    height: 470px;
+    &_box{
+      margin-top: -40px;
+    }
+    &_wrapper{
+      margin-top: 40px;
+    }
+    &_gradient{
+      background: radial-gradient(circle closest-corner at 75% 60%, #3f3f44, #2c2c2f, $bg-main);
+      height: 470px;
+    }
+    &_photo{
+      width: 400px;
+      height: 380px;
+      bottom: 0;
+      left: 57%;
+    }
+    &_circle{
+      width: 380px;
+      height: 380px;
+      bottom: 0;
+      left: 58%;
+      &_one{
+        width: 380px;
+        height: 380px;
+      }
+      &_two{
+        width: 300px;
+        height: 300px;
+      }
+    }
+    &_ellipse{
+      top: 183px;
+      left: 183px;
+      &.one{
+        transform: rotate(30deg) translateX(-190px);
+        -webkit-animation: orbit3 10s linear infinite;
+        -moz-animation: orbit3 10s linear infinite;
+        -o-animation: orbit3 10s linear infinite;
+        animation: orbit3 10s linear infinite;
+        @-webkit-keyframes orbit3 {
+          from {
+            -webkit-transform: rotate(30deg) translateX(-190px) rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(390deg) translateX(-190px) rotate(-360deg);
+          }
+        }
+        @-moz-keyframes orbit3 {
+          from {
+            -moz-transform: rotate(30deg) translateX(-190px) rotate(0deg);
+          }
+          to {
+            -moz-transform: rotate(390deg) translateX(-190px) rotate(-360deg);
+          }
+        }
+        @-o-keyframes orbit3 {
+          from {
+            -o-transform: rotate(30deg) translateX(-190px) rotate(0deg);
+          }
+          to {
+            -o-transform: rotate(390deg) translateX(-190px) rotate(-360deg);
+          }
+        }
+        @keyframes orbit3 {
+          from {
+            transform: rotate(30deg) translateX(-190px) rotate(0deg);
+          }
+          to {
+            transform: rotate(390deg) translateX(-190px) rotate(-360deg);
+          }
+        }
+      }
+      &.two{
+        transform: rotate(-20deg) translateX(-150px);
+        -webkit-animation: orbit4 8s linear infinite;
+        -moz-animation: orbit4 8s linear infinite;
+        -o-animation: orbit4 8s linear infinite;
+        animation: orbit4 8s linear infinite;
+        @-webkit-keyframes orbit4 {
+          from {
+            -webkit-transform: rotate(-20deg) translateX(-150px) rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(340deg) translateX(-150px) rotate(-360deg);
+          }
+        }
+        @-moz-keyframes orbit4 {
+          from {
+            -moz-transform: rotate(-20deg) translateX(-150px) rotate(0deg);
+          }
+          to {
+            -moz-transform: rotate(340deg) translateX(-150px) rotate(-360deg);
+          }
+        }
+        @-o-keyframes orbit4 {
+          from {
+            -o-transform: rotate(-20deg) translateX(-150px) rotate(0deg);
+          }
+          to {
+            -o-transform: rotate(340deg) translateX(-150px) rotate(-360deg);
+          }
+        }
+        @keyframes orbit4 {
+          from {
+            transform: rotate(-20deg) translateX(-150px) rotate(0deg);
+          }
+          to {
+            transform: rotate(340deg) translateX(-150px) rotate(-360deg);
+          }
+        }
+      }
+      &.three{
+        transform: rotate(-5deg) translateX(150px);
+        -webkit-animation: orbit5 8s linear infinite;
+        -moz-animation: orbit5 8s linear infinite;
+        -o-animation: orbit5 8s linear infinite;
+        animation: orbit5 8s linear infinite;
+        @-webkit-keyframes orbit5 {
+          from {
+            -webkit-transform: rotate(-5deg) translateX(150px) rotate(0deg);
+          }
+          to {
+            -webkit-transform: rotate(355deg) translateX(150px) rotate(-360deg);
+          }
+        }
+        @-moz-keyframes orbit5 {
+          from {
+            -moz-transform: rotate(-5deg) translateX(150px) rotate(0deg);
+          }
+          to {
+            -moz-transform: rotate(355deg) translateX(150px) rotate(-360deg);
+          }
+        }
+        @-o-keyframes orbit5 {
+          from {
+            -o-transform: rotate(-5deg) translateX(150px) rotate(0deg);
+          }
+          to {
+            -o-transform: rotate(355deg) translateX(150px) rotate(-360deg);
+          }
+        }
+        @keyframes orbit5 {
+          from {
+            transform: rotate(-5deg) translateX(150px) rotate(0deg);
+          }
+          to {
+            transform: rotate(355deg) translateX(150px) rotate(-360deg);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .card-trainer{
+    &_wrapper{
+      width: 330px;
+    }
+    &_description{
+      font-size: $text-size-xxs;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    &_photo{
+      left: 52%;
+    }
+    &_circle{
+      width: 380px;
+      height: 380px;
+      bottom: 0;
+      left: 54%;
+    }
+  }
+  .specialization{
+    margin-top: 60px;
+    &_wrapper{
+      margin-top: 20px;
+    }
+    &_item{
+      flex-basis: calc(50% - 30px);
+    }
+    &_text{
+      font-size: 13px;
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .card-trainer{
+    &_wrapper{
+      width: 330px;
+      margin-left: 0;
+    }
+    &_photo{
+      left: 45%;
+    }
+    &_circle{
+      left: 48%;
+    }
+  }
+}
+@media screen and (max-width: 480px) {
+  .card-trainer{
+    &_wrapper{
+      width: 280px;
+    }
+  }
+  .specialization{
+    &_text{
+      font-size: $text-size-xxs;
+    }
+  }
+}
+@media screen and (max-width: 440px) {
+  .card-trainer{
+    height: 680px;
+    &_gradient{
+      background: radial-gradient(circle closest-corner at 50% 70%, #3f3f44, #2c2c2f, $bg-main);
+      height: 680px;
+    }
+    &_photo{
+      left: 20px;
+      width: 380px;
+      height: 360px;
+    }
+    &_circle{
+      position: relative;
+      width: 380px;
+      height: 380px;
+      bottom: -210px;
+      left: 25px;
+    }
+    &_info{
+      transform: translateY(0%);
+      top: 0%;
+    }
+    &_wrapper{
+      margin-top: -250px;
+      width: 100%;
+    }
+    &_description{
+      margin-bottom: 30px;
+    }
+  }
+  .specialization{
+    margin-top: 50px;
+    &_wrapper{
+      margin-top: 20px;
+    }
+    &_item{
+      flex-direction: row;
+      flex-basis: 100%;
+    }
+    &_text{
+      text-align: left;
+      margin-top: 10px;
+      margin-left: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .card-trainer{
+    &_photo{
+      left: -20px;
+    }
+    &_circle{
+      left: -20px;
+    }
+  }
+}
+*/

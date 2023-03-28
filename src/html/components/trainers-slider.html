@@ -1,0 +1,50 @@
+<section class="trainers">
+  <div class="container">
+    <div class="trainers__bg">
+      <div class="trainers__orbit-one">
+        <div class="trainers__ellipse-one"></div>
+      </div>
+      <div class="trainers__orbit-two">
+        <div class="trainers__ellipse-two"></div>
+        <div class="trainers__ellipse-three"></div>
+      </div>
+    </div>
+    <div class="row">
+      <h2 class="title title-h2"><span>Тренерский </span>состав</h2>
+    </div>
+    <div class="trainers__description">Чем дольше вы откладываете, тем сложнее начать. Наша команда профессиональных тренеров поможет сделать успешный старт на пути к здоровому и красивому телу.</div>
+    <div class="trainers__slider">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          @@for (var i = 0; i < context.arr.length; i++) {
+          <div class="swiper-slide">
+            <div class="trainers__box">
+              <div class="trainers__box-img">
+                <img src="`+context.arr[i].image+`" alt="">
+              </div>
+              <div class="trainers__box-info">
+                <div class="trainers__box-name">`+context.arr[i].name+`</div>
+                <div class="trainers__box-description">`+context.arr[i].description+`</div>
+              </div>
+              <a class="trainers__box-link" href="`+context.arr[i].link+`"></a>
+            </div>
+          </div>
+          }
+        </div>
+
+        <div class="swiper-button-next">
+          <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 2L14 14L2 26" stroke-width="3" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="swiper-button-prev">
+          <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 2L2 14L14 26" stroke-width="3" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>

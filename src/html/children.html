@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Детский фитнес"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/breadcrumbs.html", {
+    context: {
+      title: 'Детский фитнес',
+      lastBreadcrumb: 'Детский фитнес',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+      ],
+    }
+  })
+
+  <div class="section-bg">
+    <img src="./img/children-bg.jpg" alt="">
+  </div>
+
+  @@include("./components/programs.html", {
+    context: {
+      title: '',
+      request: false,
+      arr: [
+        {'class': 'box-big', 'image': './img/programs-27.jpg', 'caption': 'Художественная гимнастика 3+', 'description': 'Секция художественной гимнастики для детей от 3 лет', 'link': './card-section.html',},
+        {'class': 'box-big', 'image': './img/programs-28.jpg', 'caption': 'Школа бокса', 'description': 'Профессиональная школа бокса', 'link': './card-section.html',},
+        {'class': 'box-middle', 'image': './img/programs-29.jpg', 'caption': 'ГТО юниор', 'description': 'Комплексная общеразвивающая тренировка', 'link': './card-section.html',},
+        {'class': 'box-middle', 'image': './img/programs-30.jpg', 'caption': 'Stretch юниор', 'description': 'Лечебно-оздоровительная тренировка, направленная на развитие гибкости ребенка.', 'link': './card-section.html',},
+        {'class': 'box-middle', 'image': './img/programs-31.jpg', 'caption': 'Cycling юниор', 'description': 'Cycling — высокоинтенсивная тренировка на велотренажёрах (сайклах).', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-32.jpg', 'caption': 'Здоровая спина юниор', 'description': 'Лечебно-оздоровительная программа для детей.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-33.jpg', 'caption': 'Tik-tok dance юниор', 'description': 'Танцевальное занятие различных современных направлений.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-34.jpg', 'caption': 'Секция тхэквандо', 'description': 'Тхэквондо, МФТ, Кикбоксинг', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-35.jpg', 'caption': 'Секция самбо и дзюдо', 'description': 'Секция Самбо и Дзюдо Roshchin Judo Team.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-36.jpg', 'caption': 'Mix fight', 'description': 'Mix Fight — единоборства для детей от 10 до 16 лет.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-37.jpg', 'caption': 'Kung fu panda юниор', 'description': 'Kung Fu Panda — единоборства для детей от 6 до 10 лет.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-38.jpg', 'caption': 'Zumba<sup>@</sup> kids юниор', 'description': 'Популярное фитнес-направление, адаптированное для детей', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-39.jpg', 'caption': 'Актерское мастерство юниор', 'description': 'Студия актёрского мастерства.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-40.jpg', 'caption': 'Functional & balance юниор', 'description': 'Тренировка на все тело, направленная на гармоничное развитие всех физических качеств ребенка и проработку мышц стабилизаторов.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-41.jpg', 'caption': 'Студия play hip-hop & house dance', 'description': 'Школа современного танца Hip-Hop & House Dance', 'link': './card-section.html',},
+      ],
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

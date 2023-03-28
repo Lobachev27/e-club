@@ -1,0 +1,478 @@
+@import "partials/params";
+@import "partials/mixins";
+
+.atmosphere {
+  position: relative;
+  margin: 60px 0;
+  @media screen and ($tablet1) {
+    margin: 80px 0;
+  }
+  @media screen and ($desktop1) {
+    margin: 100px 0;
+  }
+
+  & .row {
+    align-items: center;
+  }
+
+  &__slogan {
+    display: none;
+    @media screen and ($desktop1) {
+      display: block;
+      text-transform: uppercase;
+    }
+
+    & span {
+      color: $main-color;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    margin-top: 20px;
+    @media screen and ($desktop1) {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      grid-column-gap: 32px;
+      min-width: 0;
+      min-height: 0;
+    }
+    @media screen and ($desktop2) {
+      grid-template-columns: 1fr 2fr;
+    }
+    @media screen and ($desktop3) {
+      grid-column-gap: 64px;
+    }
+  }
+
+  &__info {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      background: url("../img/logo-bg.png") no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 140%;
+      height: 140%;
+      left: 50%;
+      top: 40%;
+      transform: translate(-50%, -50%);
+      @media screen and ($desktop1) {
+        width: 120%;
+        height: 120%;
+      }
+      @media screen and ($desktop3) {
+        width: 125%;
+        height: 135%;
+        top: 42%;
+      }
+    }
+  }
+
+  &__description {
+    color: $text-color-main-two;
+    line-height: 1.5em;
+    margin-bottom: 30px;
+    @media screen and ($tablet1) {
+      font-size: 15px;
+    }
+    @media screen and ($desktop1) {
+      font-size: 16px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    margin-top: 50px;
+    padding-bottom: 30px;
+    min-width: 0;
+    min-height: 0;
+    @media screen and ($desktop1) {
+      margin-top: 0;
+      height: max-content;
+      padding-bottom: 40px;
+    }
+
+    & .swiper-container {
+      position: relative;
+      min-width: 0;
+      min-height: 0;
+      margin: 0 auto;
+    }
+
+    & .swiper-wrapper {
+      position: relative;
+      margin: 0 auto;
+    }
+
+    & .swiper-slide {
+      position: relative;
+    }
+
+    & .swiper-pagination {
+      position: absolute;
+      white-space: nowrap;
+      top: initial;
+      bottom: 0;
+      left: 50%;
+      overflow: hidden;
+      transform: translateX(-50%);
+
+      & .swiper-pagination-bullet {
+        position: relative;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 2px solid $text-color-main;
+        margin: 0 5px;
+        transform: scale(1);
+        opacity: 0.5;
+        z-index: 2;
+        overflow: hidden;
+        transition: background-color 0.3s, transform 0.3s, left 0.3s, opacity 0.3s;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &.swiper-pagination-bullet-active {
+          opacity: 1;
+          border: 2px solid $main-color-hover;
+          background-color: $main-color-hover;
+        }
+      }
+    }
+
+    & .swiper-button-next,
+    & .swiper-button-prev {
+      position: absolute;
+      top: calc(50% + 7px);
+      transform: translateY(-50%) !important;
+      width: 8px;
+      height: 14px;
+      z-index: 10;
+      cursor: pointer;
+      pointer-events: auto;
+      background-image: none;
+      @media screen and ($desktop1) {
+        top: calc(50% + 2px);
+      }
+
+      & svg {
+        width: 100%;
+        height: 100%;
+        stroke: $bg-main;
+        z-index: 1;
+        transition: stroke 0.3s;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        background-color: $text-color-main;
+        z-index: -1;
+        opacity: 0.5;
+        transition: opacity 0.3s,;
+      }
+
+      &:hover {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+
+    & .swiper-button-next {
+      right: 17px;
+
+      &:before {
+        right: 100%;
+        transform: translate(50%, -50%);
+        border-radius: 25px 0 0 25px;
+      }
+    }
+
+    & .swiper-button-prev {
+      left: 17px;
+
+      &:before {
+        left: 100%;
+        transform: translate(-50%, -50%);
+        border-radius: 0 25px 25px 0;
+      }
+    }
+
+    &-counter {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      line-height: 16px;
+      z-index: 2;
+      @media screen and ($desktop1) {
+        font-size: 16px;
+      }
+    }
+
+    &-number {
+      display: inline;
+    }
+
+    &-total {
+      display: inline;
+      color: $text-color-main-two;
+    }
+  }
+
+  &__box {
+    position: relative;
+    padding-top: 68%;
+    overflow: hidden;
+
+    & img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/*
+@import "partials/params";
+@import "partials/mixins";
+
+.atmosphere {
+  padding-top: 80px;
+  &_bg {
+    background: url("../img/logo-bg.png");
+    background-position: center;
+    background-size: cover;
+    width: 510px;
+    height: 583px;
+    position: absolute;
+    top: -45px;
+    left: -30px;
+    @media screen and ($tablet2) {
+      width: 480px;
+      height: 550px;
+      position: absolute;
+      top: -45px;
+      left: -30px;
+    }
+    @media screen and ($tablet1) {
+      width: 400px;
+      height: 450px;
+    }
+    @media screen and ($mobile5) {
+      width: 440px;
+      height: 500px;
+      left: 0;
+    }
+    @media screen and ($mobile3) {
+      width: 100%;
+      height: 110vw;
+    }
+    @media screen and ($mobile2) {
+      width: 100%;
+      height: 100%;
+      max-height: 500px;
+    }
+  }
+  &_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 60px;
+    @media screen and ($tablet1) {
+      flex-direction: column;
+      margin-top: 40px;
+    }
+    @media screen and ($mobile5) {
+      flex-direction: column;
+      margin-top: 40px;
+    }
+  }
+  &_info {
+    display: flex;
+    flex-direction: column;
+    width: calc(30% - 30px);
+    @media screen and ($desktop1) {
+      width: calc(35% - 20px);
+    }
+    @media screen and ($tablet2) {
+      width: calc(45% - 20px);
+    }
+    @media screen and ($tablet1) {
+      width: 100%;
+      margin-bottom: 80px;
+    }
+    @media screen and ($mobile5) {
+      flex-basis: 100%;
+      margin-bottom: 80px;
+    }
+  }
+  &_description {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  &_text {
+    font-size: $text-size-xs;
+    color: $text-color-main-two;
+    margin-bottom: 25px;
+    z-index: 10;
+  }
+  &_request {
+    width: 260px;
+    z-index: 10;
+    @media screen and ($mobile2) {
+      width: 220px;
+    }
+  }
+  &_slider {
+    position: relative;
+    width: calc(70% - 30px);
+    height: 100%;
+    @media screen and ($desktop1) {
+      width: calc(65% - 20px);
+    }
+    @media screen and ($tablet2) {
+      width: calc(55% - 20px);
+    }
+    @media screen and ($tablet1) {
+      width: 100%;
+    }
+    & .slider-counter {
+      position: absolute;
+      bottom: -55px;
+      right: 0;
+      color: white;
+      @media screen and ($tablet2) {
+        bottom: -60px;
+      }
+      &__total {
+        font-size: $text-size-xs;
+        color: $text-color-main-two;
+        &:before {
+          content: " / ";
+          font-size: $text-size-xs;
+        }
+      }
+      &___change {
+        font-size: $text-size-xs;
+        position: relative;
+        text-align: right;
+        top: 16px;
+        left: -35px;
+      }
+    }
+    & .swiper-container {
+      width: 100%;
+      height: auto;
+      position: relative;
+      overflow: hidden;
+      list-style: none;
+      padding: 0;
+      z-index: 1;
+    }
+    & .swiper-slide {
+      position: relative;
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    & .swiper-pagination-bullets {
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+    }
+    & .swiper-pagination {
+      display: block;
+      position: absolute;
+      text-align: center;
+      transition: 0.3s opacity;
+      z-index: 10;
+      width: 100%;
+    }
+    & .swiper-pagination.swiper-pagination-bullets-dynamic {
+      white-space: nowrap;
+    }
+    & .swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0 20px;
+      @media screen and ($mobile5) {
+        margin: 0 8px;
+      }
+    }
+    & .swiper-pagination-clickable .swiper-pagination-bullet {
+      cursor: pointer;
+    }
+    & .swiper-pagination-bullet {
+      width: 15px;
+      height: 15px;
+      border: 2px solid white;
+      display: inline-block;
+      border-radius: 100%;
+      background: $bg-main;
+      opacity: 0.5;
+      margin: 0 10px;
+      outline: none;
+    }
+    & .swiper-pagination-bullet-active {
+      opacity: 1;
+      border: none;
+      background-color: $main-color;
+    }
+    & .swiper-button-next {
+      background: url("../img/angle-arrow-right-black.png") no-repeat 0px;
+      background-position-x: 60%;
+      background-position-y: 50%;
+      background-color: white;
+      border-radius: 25px 0 0 25px;
+      width: 8px;
+      height: 12px;
+      right: 0;
+      top: 50%;
+      padding: 25px;
+      opacity: 0.5;
+      outline: none;
+      position: absolute;
+      z-index: 10;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    & .swiper-button-prev {
+      background: url("../img/angle-arrow-left-black.png") no-repeat 0px;
+      background-position-x: 40%;
+      background-position-y: 50%;
+      background-color: white;
+      border-radius: 0 25px 25px 0;
+      width: 8px;
+      height: 12px;
+      left: 0;
+      top: 50%;
+      padding: 25px;
+      opacity: 0.5;
+      outline: none;
+      position: absolute;
+      z-index: 10;
+      cursor: pointer;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+*/

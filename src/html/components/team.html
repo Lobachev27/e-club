@@ -1,0 +1,37 @@
+<section class="team">
+  <div class="container">
+    <div class="row">
+      <h2 class="title title-h2"><span>Тренерский </span>состав</h2>
+    </div>
+    <div class="team__list">
+      @@for (var i = 0; i < context.arr.length; i++) {
+      <div class="team__box `+context.arr[i].class+`">
+        <div class="team__box-bg">
+          <div class="team__box-orbit-one">
+            <div class="team__box-ellipse-one"></div>
+          </div>
+          <div class="team__box-orbit-two">
+            <div class="team__box-ellipse-two"></div>
+            <div class="team__box-ellipse-three"></div>
+          </div>
+        </div>
+        <div class="team__box-img">
+          <img src="`+context.arr[i].image+`" alt="">
+        </div>
+        <div class="team__box-info">
+          <div class="team__box-job">`+context.arr[i].job+`</div>
+          <div class="team__box-name">`+context.arr[i].name+`</div>
+          <div class="team__box-description">`+context.arr[i].description+`</div>
+        </div>
+        <a class="team__box-link" href="`+context.arr[i].link+`"></a>
+      </div>
+      }
+      <div class="team__box box-request">
+        <div class="team__box-info">
+          <div class="title title-h2"><span>Запишитесь</span><br> на бесплатную<br> тренировку</div>
+          <a class="btn btn-big btn-gold js-popup" href="#training">Записаться</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

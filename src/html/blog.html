@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Блог"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/breadcrumbs.html", {
+    context: {
+      title: 'Блог',
+      lastBreadcrumb: 'Блог',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+      ],
+    }
+  })
+
+  <div class="section-bg">
+    <img src="./img/blog_bg.jpg" alt="">
+  </div>
+
+  @@include("./components/blog.html")
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include("./shared/head.html", {
+  "title": "Фитнес"
+})
+
+<body>
+
+@@include("./components/header.html")
+
+<main class="main">
+
+  @@include("./components/breadcrumbs.html", {
+    context: {
+      title: 'Фитнес',
+      lastBreadcrumb: 'Фитнес',
+      arr: [
+        {'text': 'Главная', 'link': './'},
+      ],
+    }
+  })
+
+  <div class="section-bg">
+    <img src="./img/fitness-bg.jpg" alt="">
+  </div>
+
+  @@include("./components/programs.html", {
+    context: {
+      title: '',
+      request: false,
+      arr: [
+        {'class': 'box-big', 'image': './img/programs-07.jpg', 'caption': 'Body sculpt', 'description': 'Силовая тренировка, направленная на все группы мышц.', 'link': './card-section.html',},
+        {'class': 'box-big', 'image': './img/programs-08.jpg', 'caption': 'Step aerobic', 'description': 'Аэробная тренировка на специальной степ-платформе.', 'link': './card-section.html',},
+        {'class': 'box-middle', 'image': './img/programs-09.jpg', 'caption': 'Fighter strong', 'description': 'Эффективная функциональная тренировка.', 'link': './card-section.html',},
+        {'class': 'box-middle', 'image': './img/programs-10.jpg', 'caption': 'Pump', 'description': 'Хит групповых программ — силовая аэробика. Включает комплекс общеукрепляющих упражнений со специальной штангой.', 'link': './card-section.html',},
+        {'class': 'box-middle', 'image': './img/programs-11.jpg', 'caption': 'Трансперсональная медитация', 'description': 'Авторский курс духовных практик, сочетающий в себе принципы психологии, медитации, буддизма, шаманизма и оккультных течений.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-12.jpg', 'caption': 'Body ballet', 'description': 'Фитнес-программа с элементами классической хореографии, адаптированной для новичков и любителей.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-13.jpg', 'caption': 'Dance mix', 'description': 'Dance Mix — танцевальный урок с элементами различных танцевальных стилей.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-14.jpg', 'caption': 'Zumba<sup>@</sup>', 'description': 'ZUMBA — зажигательная фитнес-программа, сочетающая в себе танцевальные элементы из хип-хопа, сальсы, самбы, меренге, мамбо, фламенко и танца живота. Способствует сжиганию калорий и поднятию настроения. Занятие проводит лицензированный инструктор Елена Бабуева', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-15.jpg', 'caption': 'Strip dance', 'description': 'Танцевальное направление с элементами стрип-пластики, адаптированное под формат фитнес-клуба. Помогает девушкам развить женственность и гибкость. На базе клуба открыта творческая группа по Strip Dance, на которой девушки занимаются постановкой танца для дальнейших выступлений на мероприятиях E.Club.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-16.jpg', 'caption': 'TRX', 'description': 'TRX – функциональная тренировка со специальными тренировочными петлями. Занятие предполагает нагрузку на все группы мышц, подходит для людей любого уровня подготовки.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-17.jpg', 'caption': 'Functional training', 'description': 'Functional Training —   функциональная тренировка, направленная на укрепление мышц, участвующих в повседневной жизнедеятельности. Это программа упражнений на силу и выносливость, состоящая из аэробных упражнений, гимнастики и тяжёлой атлетики. Помимо силовых показателей тренировка способствует развитию гибкости и координации, а также жиросжиганию.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-18.jpg', 'caption': 'Basic workout', 'description': 'Basic Workout — тренировка с отягощениями, включающая в себя силовой и функциональный тренинг.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-19.jpg', 'caption': 'Abs', 'description': 'ABS — силовая тренировка, направленная на проработку мышц пресса.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-20.jpg', 'caption': 'Stretch', 'description': 'Stretch — тренировка, направленная на развитие гибкости и растяжку. Занятия помогут мышцам восстановиться после силового тренинга, а также увеличить подвижность суставов, улучшить осанку, снять напряжение и стресс.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-21.jpg', 'caption': 'Multifit training', 'description': 'MultiFIT — авторская программа упражнений на силу и выносливость, состоящая, в основном, из аэробных упражнений, гимнастики и тяжёлой атлетики.  Это функциональная тренировка на все группы мышц. В программе используются естественные движения и нагрузки, требующие силы, гибкости и координации.  ', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-22.jpg', 'caption': 'Lower body', 'description': 'Lower Body — силовая тренировка, направленная на проработку мышц ног, пресса и ягодиц.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-23.jpg', 'caption': 'Upper body + Stretch', 'description': 'Upper Body+Stretch — силовая тренировка, направленная на проработку верхней части тела (плечи, руки, грудь, живот) с элементами растяжки.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-24.jpg', 'caption': 'Interval Mix', 'description': '', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-25.jpg', 'caption': 'Bodyfit', 'description': 'Bodyfit  —  силовая тренировка, направленная на все основные мышечные группы.', 'link': './card-section.html',},
+        {'class': 'box-small', 'image': './img/programs-26.jpg', 'caption': 'Cycling', 'description': 'Cycling — высокоинтенсивная тренировка на велотренажёрах (сайклах). Занятие повышает выносливость организма, укрепляет сердечно-сосудистую систему, а также позволяет подкачать мышцы ног, спины и пресса.', 'link': './card-section.html',},
+      ],
+    }
+  })
+
+</main>
+
+@@include("./components/footer.html")
+
+@@include("./shared/script.html")
+
+</body>
+</html>
